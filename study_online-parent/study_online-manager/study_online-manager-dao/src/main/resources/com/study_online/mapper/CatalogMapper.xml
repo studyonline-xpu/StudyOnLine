@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study_online.mapper.CatalogMapper">
+  <resultMap id="BaseResultMap" type="com.study_online.pojo.Catalog">
+    <id column="catalog_id" jdbcType="VARCHAR" property="catalogId" />
+    <result column="catalog_name" jdbcType="VARCHAR" property="catalogName" />
+    <result column="father_id" jdbcType="VARCHAR" property="fatherId" />
+    <result column="is_father" jdbcType="BIT" property="isFather" />
+    <result column="formar_id" jdbcType="VARCHAR" property="formarId" />
+    <result column="latter_id" jdbcType="VARCHAR" property="latterId" />
+    <result column="video_id" jdbcType="VARCHAR" property="videoId" />
+    <result column="upload_time" jdbcType="TIMESTAMP" property="uploadTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.study_online.pojo.Catalog">
+    <result column="video_url" jdbcType="LONGVARCHAR" property="videoUrl" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    catalog_id, catalog_name, father_id, is_father, formar_id, latter_id, video_id, upload_time
+  </sql>
+  <sql id="Blob_Column_List">
+    video_url
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.study_online.pojo.CatalogExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from catalog
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.study_online.pojo.CatalogExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from catalog
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from catalog
+    where catalog_id = #{catalogId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from catalog
+    where catalog_id = #{catalogId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.study_online.pojo.CatalogExample">
+    delete from catalog
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.study_online.pojo.Catalog">
+    insert into catalog (catalog_id, catalog_name, father_id, 
+      is_father, formar_id, latter_id, 
+      video_id, upload_time, video_url
+      )
+    values (#{catalogId,jdbcType=VARCHAR}, #{catalogName,jdbcType=VARCHAR}, #{fatherId,jdbcType=VARCHAR}, 
+      #{isFather,jdbcType=BIT}, #{formarId,jdbcType=VARCHAR}, #{latterId,jdbcType=VARCHAR}, 
+      #{videoId,jdbcType=VARCHAR}, #{uploadTime,jdbcType=TIMESTAMP}, #{videoUrl,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.study_online.pojo.Catalog">
+    insert into catalog
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="catalogId != null">
+        catalog_id,
+      </if>
+      <if test="catalogName != null">
+        catalog_name,
+      </if>
+      <if test="fatherId != null">
+        father_id,
+      </if>
+      <if test="isFather != null">
+        is_father,
+      </if>
+      <if test="formarId != null">
+        formar_id,
+      </if>
+      <if test="latterId != null">
+        latter_id,
+      </if>
+      <if test="videoId != null">
+        video_id,
+      </if>
+      <if test="uploadTime != null">
+        upload_time,
+      </if>
+      <if test="videoUrl != null">
+        video_url,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="catalogId != null">
+        #{catalogId,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogName != null">
+        #{catalogName,jdbcType=VARCHAR},
+      </if>
+      <if test="fatherId != null">
+        #{fatherId,jdbcType=VARCHAR},
+      </if>
+      <if test="isFather != null">
+        #{isFather,jdbcType=BIT},
+      </if>
+      <if test="formarId != null">
+        #{formarId,jdbcType=VARCHAR},
+      </if>
+      <if test="latterId != null">
+        #{latterId,jdbcType=VARCHAR},
+      </if>
+      <if test="videoId != null">
+        #{videoId,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadTime != null">
+        #{uploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="videoUrl != null">
+        #{videoUrl,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.study_online.pojo.CatalogExample" resultType="java.lang.Long">
+    select count(*) from catalog
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update catalog
+    <set>
+      <if test="record.catalogId != null">
+        catalog_id = #{record.catalogId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.catalogName != null">
+        catalog_name = #{record.catalogName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fatherId != null">
+        father_id = #{record.fatherId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isFather != null">
+        is_father = #{record.isFather,jdbcType=BIT},
+      </if>
+      <if test="record.formarId != null">
+        formar_id = #{record.formarId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.latterId != null">
+        latter_id = #{record.latterId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.videoId != null">
+        video_id = #{record.videoId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uploadTime != null">
+        upload_time = #{record.uploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.videoUrl != null">
+        video_url = #{record.videoUrl,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update catalog
+    set catalog_id = #{record.catalogId,jdbcType=VARCHAR},
+      catalog_name = #{record.catalogName,jdbcType=VARCHAR},
+      father_id = #{record.fatherId,jdbcType=VARCHAR},
+      is_father = #{record.isFather,jdbcType=BIT},
+      formar_id = #{record.formarId,jdbcType=VARCHAR},
+      latter_id = #{record.latterId,jdbcType=VARCHAR},
+      video_id = #{record.videoId,jdbcType=VARCHAR},
+      upload_time = #{record.uploadTime,jdbcType=TIMESTAMP},
+      video_url = #{record.videoUrl,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update catalog
+    set catalog_id = #{record.catalogId,jdbcType=VARCHAR},
+      catalog_name = #{record.catalogName,jdbcType=VARCHAR},
+      father_id = #{record.fatherId,jdbcType=VARCHAR},
+      is_father = #{record.isFather,jdbcType=BIT},
+      formar_id = #{record.formarId,jdbcType=VARCHAR},
+      latter_id = #{record.latterId,jdbcType=VARCHAR},
+      video_id = #{record.videoId,jdbcType=VARCHAR},
+      upload_time = #{record.uploadTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.study_online.pojo.Catalog">
+    update catalog
+    <set>
+      <if test="catalogName != null">
+        catalog_name = #{catalogName,jdbcType=VARCHAR},
+      </if>
+      <if test="fatherId != null">
+        father_id = #{fatherId,jdbcType=VARCHAR},
+      </if>
+      <if test="isFather != null">
+        is_father = #{isFather,jdbcType=BIT},
+      </if>
+      <if test="formarId != null">
+        formar_id = #{formarId,jdbcType=VARCHAR},
+      </if>
+      <if test="latterId != null">
+        latter_id = #{latterId,jdbcType=VARCHAR},
+      </if>
+      <if test="videoId != null">
+        video_id = #{videoId,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadTime != null">
+        upload_time = #{uploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="videoUrl != null">
+        video_url = #{videoUrl,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where catalog_id = #{catalogId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.study_online.pojo.Catalog">
+    update catalog
+    set catalog_name = #{catalogName,jdbcType=VARCHAR},
+      father_id = #{fatherId,jdbcType=VARCHAR},
+      is_father = #{isFather,jdbcType=BIT},
+      formar_id = #{formarId,jdbcType=VARCHAR},
+      latter_id = #{latterId,jdbcType=VARCHAR},
+      video_id = #{videoId,jdbcType=VARCHAR},
+      upload_time = #{uploadTime,jdbcType=TIMESTAMP},
+      video_url = #{videoUrl,jdbcType=LONGVARCHAR}
+    where catalog_id = #{catalogId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.study_online.pojo.Catalog">
+    update catalog
+    set catalog_name = #{catalogName,jdbcType=VARCHAR},
+      father_id = #{fatherId,jdbcType=VARCHAR},
+      is_father = #{isFather,jdbcType=BIT},
+      formar_id = #{formarId,jdbcType=VARCHAR},
+      latter_id = #{latterId,jdbcType=VARCHAR},
+      video_id = #{videoId,jdbcType=VARCHAR},
+      upload_time = #{uploadTime,jdbcType=TIMESTAMP}
+    where catalog_id = #{catalogId,jdbcType=VARCHAR}
+  </update>
+</mapper>
