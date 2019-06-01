@@ -1,0 +1,15 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+/study_online-common/target/
+/study_online-manager-web/target/
+/study_online-manager/study_online-manager-dao/target/
+/study_online-manager/study_online-manager-pojo/target/
+/study_online-manager/study_online-manager-service/target/
+/study_online-manager/study_online-manager-interface/target/
+out
+gen
