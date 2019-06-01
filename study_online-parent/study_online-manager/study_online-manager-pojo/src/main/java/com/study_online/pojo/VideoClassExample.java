@@ -244,73 +244,73 @@ public class VideoClassExample {
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdIsNull() {
-            addCriterion("fasther_id is null");
+        public Criteria andFatherIdIsNull() {
+            addCriterion("father_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdIsNotNull() {
-            addCriterion("fasther_id is not null");
+        public Criteria andFatherIdIsNotNull() {
+            addCriterion("father_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdEqualTo(String value) {
-            addCriterion("fasther_id =", value, "fastherId");
+        public Criteria andFatherIdEqualTo(String value) {
+            addCriterion("father_id =", value, "fatherId");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdNotEqualTo(String value) {
-            addCriterion("fasther_id <>", value, "fastherId");
+        public Criteria andFatherIdNotEqualTo(String value) {
+            addCriterion("father_id <>", value, "fatherId");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdGreaterThan(String value) {
-            addCriterion("fasther_id >", value, "fastherId");
+        public Criteria andFatherIdGreaterThan(String value) {
+            addCriterion("father_id >", value, "fatherId");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdGreaterThanOrEqualTo(String value) {
-            addCriterion("fasther_id >=", value, "fastherId");
+        public Criteria andFatherIdGreaterThanOrEqualTo(String value) {
+            addCriterion("father_id >=", value, "fatherId");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdLessThan(String value) {
-            addCriterion("fasther_id <", value, "fastherId");
+        public Criteria andFatherIdLessThan(String value) {
+            addCriterion("father_id <", value, "fatherId");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdLessThanOrEqualTo(String value) {
-            addCriterion("fasther_id <=", value, "fastherId");
+        public Criteria andFatherIdLessThanOrEqualTo(String value) {
+            addCriterion("father_id <=", value, "fatherId");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdLike(String value) {
-            addCriterion("fasther_id like", value, "fastherId");
+        public Criteria andFatherIdLike(String value) {
+            addCriterion("father_id like", value, "fatherId");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdNotLike(String value) {
-            addCriterion("fasther_id not like", value, "fastherId");
+        public Criteria andFatherIdNotLike(String value) {
+            addCriterion("father_id not like", value, "fatherId");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdIn(List<String> values) {
-            addCriterion("fasther_id in", values, "fastherId");
+        public Criteria andFatherIdIn(List<String> values) {
+            addCriterion("father_id in", values, "fatherId");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdNotIn(List<String> values) {
-            addCriterion("fasther_id not in", values, "fastherId");
+        public Criteria andFatherIdNotIn(List<String> values) {
+            addCriterion("father_id not in", values, "fatherId");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdBetween(String value1, String value2) {
-            addCriterion("fasther_id between", value1, value2, "fastherId");
+        public Criteria andFatherIdBetween(String value1, String value2) {
+            addCriterion("father_id between", value1, value2, "fatherId");
             return (Criteria) this;
         }
 
-        public Criteria andFastherIdNotBetween(String value1, String value2) {
-            addCriterion("fasther_id not between", value1, value2, "fastherId");
+        public Criteria andFatherIdNotBetween(String value1, String value2) {
+            addCriterion("father_id not between", value1, value2, "fatherId");
             return (Criteria) this;
         }
 

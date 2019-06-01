@@ -565,123 +565,123 @@ public class VideoExample {
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeIsNull() {
-            addCriterion("click_time is null");
+        public Criteria andClicksIsNull() {
+            addCriterion("clicks is null");
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeIsNotNull() {
-            addCriterion("click_time is not null");
+        public Criteria andClicksIsNotNull() {
+            addCriterion("clicks is not null");
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeEqualTo(Long value) {
-            addCriterion("click_time =", value, "clickTime");
+        public Criteria andClicksEqualTo(Long value) {
+            addCriterion("clicks =", value, "clicks");
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeNotEqualTo(Long value) {
-            addCriterion("click_time <>", value, "clickTime");
+        public Criteria andClicksNotEqualTo(Long value) {
+            addCriterion("clicks <>", value, "clicks");
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeGreaterThan(Long value) {
-            addCriterion("click_time >", value, "clickTime");
+        public Criteria andClicksGreaterThan(Long value) {
+            addCriterion("clicks >", value, "clicks");
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeGreaterThanOrEqualTo(Long value) {
-            addCriterion("click_time >=", value, "clickTime");
+        public Criteria andClicksGreaterThanOrEqualTo(Long value) {
+            addCriterion("clicks >=", value, "clicks");
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeLessThan(Long value) {
-            addCriterion("click_time <", value, "clickTime");
+        public Criteria andClicksLessThan(Long value) {
+            addCriterion("clicks <", value, "clicks");
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeLessThanOrEqualTo(Long value) {
-            addCriterion("click_time <=", value, "clickTime");
+        public Criteria andClicksLessThanOrEqualTo(Long value) {
+            addCriterion("clicks <=", value, "clicks");
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeIn(List<Long> values) {
-            addCriterion("click_time in", values, "clickTime");
+        public Criteria andClicksIn(List<Long> values) {
+            addCriterion("clicks in", values, "clicks");
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeNotIn(List<Long> values) {
-            addCriterion("click_time not in", values, "clickTime");
+        public Criteria andClicksNotIn(List<Long> values) {
+            addCriterion("clicks not in", values, "clicks");
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeBetween(Long value1, Long value2) {
-            addCriterion("click_time between", value1, value2, "clickTime");
+        public Criteria andClicksBetween(Long value1, Long value2) {
+            addCriterion("clicks between", value1, value2, "clicks");
             return (Criteria) this;
         }
 
-        public Criteria andClickTimeNotBetween(Long value1, Long value2) {
-            addCriterion("click_time not between", value1, value2, "clickTime");
+        public Criteria andClicksNotBetween(Long value1, Long value2) {
+            addCriterion("clicks not between", value1, value2, "clicks");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeIsNull() {
-            addCriterion("collect_time is null");
+        public Criteria andCollectionsIsNull() {
+            addCriterion("collections is null");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeIsNotNull() {
-            addCriterion("collect_time is not null");
+        public Criteria andCollectionsIsNotNull() {
+            addCriterion("collections is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeEqualTo(Long value) {
-            addCriterion("collect_time =", value, "collectTime");
+        public Criteria andCollectionsEqualTo(Long value) {
+            addCriterion("collections =", value, "collections");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeNotEqualTo(Long value) {
-            addCriterion("collect_time <>", value, "collectTime");
+        public Criteria andCollectionsNotEqualTo(Long value) {
+            addCriterion("collections <>", value, "collections");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeGreaterThan(Long value) {
-            addCriterion("collect_time >", value, "collectTime");
+        public Criteria andCollectionsGreaterThan(Long value) {
+            addCriterion("collections >", value, "collections");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeGreaterThanOrEqualTo(Long value) {
-            addCriterion("collect_time >=", value, "collectTime");
+        public Criteria andCollectionsGreaterThanOrEqualTo(Long value) {
+            addCriterion("collections >=", value, "collections");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeLessThan(Long value) {
-            addCriterion("collect_time <", value, "collectTime");
+        public Criteria andCollectionsLessThan(Long value) {
+            addCriterion("collections <", value, "collections");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeLessThanOrEqualTo(Long value) {
-            addCriterion("collect_time <=", value, "collectTime");
+        public Criteria andCollectionsLessThanOrEqualTo(Long value) {
+            addCriterion("collections <=", value, "collections");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeIn(List<Long> values) {
-            addCriterion("collect_time in", values, "collectTime");
+        public Criteria andCollectionsIn(List<Long> values) {
+            addCriterion("collections in", values, "collections");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeNotIn(List<Long> values) {
-            addCriterion("collect_time not in", values, "collectTime");
+        public Criteria andCollectionsNotIn(List<Long> values) {
+            addCriterion("collections not in", values, "collections");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeBetween(Long value1, Long value2) {
-            addCriterion("collect_time between", value1, value2, "collectTime");
+        public Criteria andCollectionsBetween(Long value1, Long value2) {
+            addCriterion("collections between", value1, value2, "collections");
             return (Criteria) this;
         }
 
-        public Criteria andCollectTimeNotBetween(Long value1, Long value2) {
-            addCriterion("collect_time not between", value1, value2, "collectTime");
+        public Criteria andCollectionsNotBetween(Long value1, Long value2) {
+            addCriterion("collections not between", value1, value2, "collections");
             return (Criteria) this;
         }
     }

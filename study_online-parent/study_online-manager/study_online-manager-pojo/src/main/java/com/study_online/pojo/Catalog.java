@@ -12,7 +12,7 @@ public class Catalog implements Serializable {
 
     private Boolean isFather;
 
-    private String formarId;
+    private String formerId;
 
     private String latterId;
 
@@ -56,12 +56,12 @@ public class Catalog implements Serializable {
         this.isFather = isFather;
     }
 
-    public String getFormarId() {
-        return formarId;
+    public String getFormerId() {
+        return formerId;
     }
 
-    public void setFormarId(String formarId) {
-        this.formarId = formarId == null ? null : formarId.trim();
+    public void setFormerId(String formerId) {
+        this.formerId = formerId == null ? null : formerId.trim();
     }
 
     public String getLatterId() {

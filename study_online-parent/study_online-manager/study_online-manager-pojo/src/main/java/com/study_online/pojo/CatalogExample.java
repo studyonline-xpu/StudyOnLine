@@ -375,73 +375,73 @@ public class CatalogExample {
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdIsNull() {
-            addCriterion("formar_id is null");
+        public Criteria andFormerIdIsNull() {
+            addCriterion("former_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdIsNotNull() {
-            addCriterion("formar_id is not null");
+        public Criteria andFormerIdIsNotNull() {
+            addCriterion("former_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdEqualTo(String value) {
-            addCriterion("formar_id =", value, "formarId");
+        public Criteria andFormerIdEqualTo(String value) {
+            addCriterion("former_id =", value, "formerId");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdNotEqualTo(String value) {
-            addCriterion("formar_id <>", value, "formarId");
+        public Criteria andFormerIdNotEqualTo(String value) {
+            addCriterion("former_id <>", value, "formerId");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdGreaterThan(String value) {
-            addCriterion("formar_id >", value, "formarId");
+        public Criteria andFormerIdGreaterThan(String value) {
+            addCriterion("former_id >", value, "formerId");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdGreaterThanOrEqualTo(String value) {
-            addCriterion("formar_id >=", value, "formarId");
+        public Criteria andFormerIdGreaterThanOrEqualTo(String value) {
+            addCriterion("former_id >=", value, "formerId");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdLessThan(String value) {
-            addCriterion("formar_id <", value, "formarId");
+        public Criteria andFormerIdLessThan(String value) {
+            addCriterion("former_id <", value, "formerId");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdLessThanOrEqualTo(String value) {
-            addCriterion("formar_id <=", value, "formarId");
+        public Criteria andFormerIdLessThanOrEqualTo(String value) {
+            addCriterion("former_id <=", value, "formerId");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdLike(String value) {
-            addCriterion("formar_id like", value, "formarId");
+        public Criteria andFormerIdLike(String value) {
+            addCriterion("former_id like", value, "formerId");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdNotLike(String value) {
-            addCriterion("formar_id not like", value, "formarId");
+        public Criteria andFormerIdNotLike(String value) {
+            addCriterion("former_id not like", value, "formerId");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdIn(List<String> values) {
-            addCriterion("formar_id in", values, "formarId");
+        public Criteria andFormerIdIn(List<String> values) {
+            addCriterion("former_id in", values, "formerId");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdNotIn(List<String> values) {
-            addCriterion("formar_id not in", values, "formarId");
+        public Criteria andFormerIdNotIn(List<String> values) {
+            addCriterion("former_id not in", values, "formerId");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdBetween(String value1, String value2) {
-            addCriterion("formar_id between", value1, value2, "formarId");
+        public Criteria andFormerIdBetween(String value1, String value2) {
+            addCriterion("former_id between", value1, value2, "formerId");
             return (Criteria) this;
         }
 
-        public Criteria andFormarIdNotBetween(String value1, String value2) {
-            addCriterion("formar_id not between", value1, value2, "formarId");
+        public Criteria andFormerIdNotBetween(String value1, String value2) {
+            addCriterion("former_id not between", value1, value2, "formerId");
             return (Criteria) this;
         }
 

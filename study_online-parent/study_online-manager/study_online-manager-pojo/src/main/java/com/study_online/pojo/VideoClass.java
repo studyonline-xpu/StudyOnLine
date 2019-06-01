@@ -7,7 +7,7 @@ public class VideoClass implements Serializable {
 
     private String className;
 
-    private String fastherId;
+    private String fatherId;
 
     private Boolean isFather;
 
@@ -29,12 +29,12 @@ public class VideoClass implements Serializable {
         this.className = className == null ? null : className.trim();
     }
 
-    public String getFastherId() {
-        return fastherId;
+    public String getFatherId() {
+        return fatherId;
     }
 
-    public void setFastherId(String fastherId) {
-        this.fastherId = fastherId == null ? null : fastherId.trim();
+    public void setFatherId(String fatherId) {
+        this.fatherId = fatherId == null ? null : fatherId.trim();
     }
 
     public Boolean getIsFather() {

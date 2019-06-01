@@ -18,9 +18,9 @@ public class Video implements Serializable {
 
     private Double price;
 
-    private Long clickTime;
+    private Long clicks;
 
-    private Long collectTime;
+    private Long collections;
 
     private String note;
 
@@ -82,20 +82,20 @@ public class Video implements Serializable {
         this.price = price;
     }
 
-    public Long getClickTime() {
-        return clickTime;
+    public Long getClicks() {
+        return clicks;
     }
 
-    public void setClickTime(Long clickTime) {
-        this.clickTime = clickTime;
+    public void setClicks(Long clicks) {
+        this.clicks = clicks;
     }
 
-    public Long getCollectTime() {
-        return collectTime;
+    public Long getCollections() {
+        return collections;
     }
 
-    public void setCollectTime(Long collectTime) {
-        this.collectTime = collectTime;
+    public void setCollections(Long collections) {
+        this.collections = collections;
     }
 
     public String getNote() {

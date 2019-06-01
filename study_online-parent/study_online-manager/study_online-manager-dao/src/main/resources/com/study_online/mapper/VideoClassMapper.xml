@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.study_online.pojo.VideoClass">
     <id column="class_id" jdbcType="VARCHAR" property="classId" />
     <result column="class_name" jdbcType="VARCHAR" property="className" />
-    <result column="fasther_id" jdbcType="VARCHAR" property="fastherId" />
+    <result column="father_id" jdbcType="VARCHAR" property="fatherId" />
     <result column="is_father" jdbcType="BIT" property="isFather" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -66,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    class_id, class_name, fasther_id, is_father
+    class_id, class_name, father_id, is_father
   </sql>
   <select id="selectByExample" parameterType="com.study_online.pojo.VideoClassExample" resultMap="BaseResultMap">
     select
@@ -99,9 +99,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.study_online.pojo.VideoClass">
-    insert into video_class (class_id, class_name, fasther_id, 
+    insert into video_class (class_id, class_name, father_id, 
       is_father)
-    values (#{classId,jdbcType=VARCHAR}, #{className,jdbcType=VARCHAR}, #{fastherId,jdbcType=VARCHAR}, 
+    values (#{classId,jdbcType=VARCHAR}, #{className,jdbcType=VARCHAR}, #{fatherId,jdbcType=VARCHAR}, 
       #{isFather,jdbcType=BIT})
   </insert>
   <insert id="insertSelective" parameterType="com.study_online.pojo.VideoClass">
@@ -113,8 +113,8 @@
       <if test="className != null">
         class_name,
       </if>
-      <if test="fastherId != null">
-        fasther_id,
+      <if test="fatherId != null">
+        father_id,
       </if>
       <if test="isFather != null">
         is_father,
@@ -127,8 +127,8 @@
       <if test="className != null">
         #{className,jdbcType=VARCHAR},
       </if>
-      <if test="fastherId != null">
-        #{fastherId,jdbcType=VARCHAR},
+      <if test="fatherId != null">
+        #{fatherId,jdbcType=VARCHAR},
       </if>
       <if test="isFather != null">
         #{isFather,jdbcType=BIT},
@@ -150,8 +150,8 @@
       <if test="record.className != null">
         class_name = #{record.className,jdbcType=VARCHAR},
       </if>
-      <if test="record.fastherId != null">
-        fasther_id = #{record.fastherId,jdbcType=VARCHAR},
+      <if test="record.fatherId != null">
+        father_id = #{record.fatherId,jdbcType=VARCHAR},
       </if>
       <if test="record.isFather != null">
         is_father = #{record.isFather,jdbcType=BIT},
@@ -165,7 +165,7 @@
     update video_class
     set class_id = #{record.classId,jdbcType=VARCHAR},
       class_name = #{record.className,jdbcType=VARCHAR},
-      fasther_id = #{record.fastherId,jdbcType=VARCHAR},
+      father_id = #{record.fatherId,jdbcType=VARCHAR},
       is_father = #{record.isFather,jdbcType=BIT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -177,8 +177,8 @@
       <if test="className != null">
         class_name = #{className,jdbcType=VARCHAR},
       </if>
-      <if test="fastherId != null">
-        fasther_id = #{fastherId,jdbcType=VARCHAR},
+      <if test="fatherId != null">
+        father_id = #{fatherId,jdbcType=VARCHAR},
       </if>
       <if test="isFather != null">
         is_father = #{isFather,jdbcType=BIT},
@@ -189,7 +189,7 @@
   <update id="updateByPrimaryKey" parameterType="com.study_online.pojo.VideoClass">
     update video_class
     set class_name = #{className,jdbcType=VARCHAR},
-      fasther_id = #{fastherId,jdbcType=VARCHAR},
+      father_id = #{fatherId,jdbcType=VARCHAR},
       is_father = #{isFather,jdbcType=BIT}
     where class_id = #{classId,jdbcType=VARCHAR}
   </update>

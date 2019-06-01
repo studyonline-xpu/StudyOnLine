@@ -6,7 +6,7 @@
     <result column="catalog_name" jdbcType="VARCHAR" property="catalogName" />
     <result column="father_id" jdbcType="VARCHAR" property="fatherId" />
     <result column="is_father" jdbcType="BIT" property="isFather" />
-    <result column="formar_id" jdbcType="VARCHAR" property="formarId" />
+    <result column="former_id" jdbcType="VARCHAR" property="formerId" />
     <result column="latter_id" jdbcType="VARCHAR" property="latterId" />
     <result column="video_id" jdbcType="VARCHAR" property="videoId" />
     <result column="upload_time" jdbcType="TIMESTAMP" property="uploadTime" />
@@ -73,7 +73,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    catalog_id, catalog_name, father_id, is_father, formar_id, latter_id, video_id, upload_time
+    catalog_id, catalog_name, father_id, is_father, former_id, latter_id, video_id, upload_time
   </sql>
   <sql id="Blob_Column_List">
     video_url
@@ -128,11 +128,11 @@
   </delete>
   <insert id="insert" parameterType="com.study_online.pojo.Catalog">
     insert into catalog (catalog_id, catalog_name, father_id, 
-      is_father, formar_id, latter_id, 
+      is_father, former_id, latter_id, 
       video_id, upload_time, video_url
       )
     values (#{catalogId,jdbcType=VARCHAR}, #{catalogName,jdbcType=VARCHAR}, #{fatherId,jdbcType=VARCHAR}, 
-      #{isFather,jdbcType=BIT}, #{formarId,jdbcType=VARCHAR}, #{latterId,jdbcType=VARCHAR}, 
+      #{isFather,jdbcType=BIT}, #{formerId,jdbcType=VARCHAR}, #{latterId,jdbcType=VARCHAR}, 
       #{videoId,jdbcType=VARCHAR}, #{uploadTime,jdbcType=TIMESTAMP}, #{videoUrl,jdbcType=LONGVARCHAR}
       )
   </insert>
@@ -151,8 +151,8 @@
       <if test="isFather != null">
         is_father,
       </if>
-      <if test="formarId != null">
-        formar_id,
+      <if test="formerId != null">
+        former_id,
       </if>
       <if test="latterId != null">
         latter_id,
@@ -180,8 +180,8 @@
       <if test="isFather != null">
         #{isFather,jdbcType=BIT},
       </if>
-      <if test="formarId != null">
-        #{formarId,jdbcType=VARCHAR},
+      <if test="formerId != null">
+        #{formerId,jdbcType=VARCHAR},
       </if>
       <if test="latterId != null">
         #{latterId,jdbcType=VARCHAR},
@@ -218,8 +218,8 @@
       <if test="record.isFather != null">
         is_father = #{record.isFather,jdbcType=BIT},
       </if>
-      <if test="record.formarId != null">
-        formar_id = #{record.formarId,jdbcType=VARCHAR},
+      <if test="record.formerId != null">
+        former_id = #{record.formerId,jdbcType=VARCHAR},
       </if>
       <if test="record.latterId != null">
         latter_id = #{record.latterId,jdbcType=VARCHAR},
@@ -244,7 +244,7 @@
       catalog_name = #{record.catalogName,jdbcType=VARCHAR},
       father_id = #{record.fatherId,jdbcType=VARCHAR},
       is_father = #{record.isFather,jdbcType=BIT},
-      formar_id = #{record.formarId,jdbcType=VARCHAR},
+      former_id = #{record.formerId,jdbcType=VARCHAR},
       latter_id = #{record.latterId,jdbcType=VARCHAR},
       video_id = #{record.videoId,jdbcType=VARCHAR},
       upload_time = #{record.uploadTime,jdbcType=TIMESTAMP},
@@ -259,7 +259,7 @@
       catalog_name = #{record.catalogName,jdbcType=VARCHAR},
       father_id = #{record.fatherId,jdbcType=VARCHAR},
       is_father = #{record.isFather,jdbcType=BIT},
-      formar_id = #{record.formarId,jdbcType=VARCHAR},
+      former_id = #{record.formerId,jdbcType=VARCHAR},
       latter_id = #{record.latterId,jdbcType=VARCHAR},
       video_id = #{record.videoId,jdbcType=VARCHAR},
       upload_time = #{record.uploadTime,jdbcType=TIMESTAMP}
@@ -279,8 +279,8 @@
       <if test="isFather != null">
         is_father = #{isFather,jdbcType=BIT},
       </if>
-      <if test="formarId != null">
-        formar_id = #{formarId,jdbcType=VARCHAR},
+      <if test="formerId != null">
+        former_id = #{formerId,jdbcType=VARCHAR},
       </if>
       <if test="latterId != null">
         latter_id = #{latterId,jdbcType=VARCHAR},
@@ -302,7 +302,7 @@
     set catalog_name = #{catalogName,jdbcType=VARCHAR},
       father_id = #{fatherId,jdbcType=VARCHAR},
       is_father = #{isFather,jdbcType=BIT},
-      formar_id = #{formarId,jdbcType=VARCHAR},
+      former_id = #{formerId,jdbcType=VARCHAR},
       latter_id = #{latterId,jdbcType=VARCHAR},
       video_id = #{videoId,jdbcType=VARCHAR},
       upload_time = #{uploadTime,jdbcType=TIMESTAMP},
@@ -314,7 +314,7 @@
     set catalog_name = #{catalogName,jdbcType=VARCHAR},
       father_id = #{fatherId,jdbcType=VARCHAR},
       is_father = #{isFather,jdbcType=BIT},
-      formar_id = #{formarId,jdbcType=VARCHAR},
+      former_id = #{formerId,jdbcType=VARCHAR},
       latter_id = #{latterId,jdbcType=VARCHAR},
       video_id = #{videoId,jdbcType=VARCHAR},
       upload_time = #{uploadTime,jdbcType=TIMESTAMP}

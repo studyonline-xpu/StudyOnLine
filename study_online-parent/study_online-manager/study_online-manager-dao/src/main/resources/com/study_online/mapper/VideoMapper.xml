@@ -9,8 +9,8 @@
     <result column="upload_time" jdbcType="TIMESTAMP" property="uploadTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="price" jdbcType="DOUBLE" property="price" />
-    <result column="click_time" jdbcType="BIGINT" property="clickTime" />
-    <result column="collect_time" jdbcType="BIGINT" property="collectTime" />
+    <result column="clicks" jdbcType="BIGINT" property="clicks" />
+    <result column="collections" jdbcType="BIGINT" property="collections" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.study_online.pojo.Video">
     <result column="note" jdbcType="LONGVARCHAR" property="note" />
@@ -74,8 +74,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    video_id, video_name, user_id, class_id, upload_time, update_time, price, click_time, 
-    collect_time
+    video_id, video_name, user_id, class_id, upload_time, update_time, price, clicks, 
+    collections
   </sql>
   <sql id="Blob_Column_List">
     note
@@ -131,11 +131,11 @@
   <insert id="insert" parameterType="com.study_online.pojo.Video">
     insert into video (video_id, video_name, user_id, 
       class_id, upload_time, update_time, 
-      price, click_time, collect_time, 
+      price, clicks, collections, 
       note)
     values (#{videoId,jdbcType=VARCHAR}, #{videoName,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, 
       #{classId,jdbcType=VARCHAR}, #{uploadTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
-      #{price,jdbcType=DOUBLE}, #{clickTime,jdbcType=BIGINT}, #{collectTime,jdbcType=BIGINT}, 
+      #{price,jdbcType=DOUBLE}, #{clicks,jdbcType=BIGINT}, #{collections,jdbcType=BIGINT}, 
       #{note,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.study_online.pojo.Video">
@@ -162,11 +162,11 @@
       <if test="price != null">
         price,
       </if>
-      <if test="clickTime != null">
-        click_time,
+      <if test="clicks != null">
+        clicks,
       </if>
-      <if test="collectTime != null">
-        collect_time,
+      <if test="collections != null">
+        collections,
       </if>
       <if test="note != null">
         note,
@@ -194,11 +194,11 @@
       <if test="price != null">
         #{price,jdbcType=DOUBLE},
       </if>
-      <if test="clickTime != null">
-        #{clickTime,jdbcType=BIGINT},
+      <if test="clicks != null">
+        #{clicks,jdbcType=BIGINT},
       </if>
-      <if test="collectTime != null">
-        #{collectTime,jdbcType=BIGINT},
+      <if test="collections != null">
+        #{collections,jdbcType=BIGINT},
       </if>
       <if test="note != null">
         #{note,jdbcType=LONGVARCHAR},
@@ -235,11 +235,11 @@
       <if test="record.price != null">
         price = #{record.price,jdbcType=DOUBLE},
       </if>
-      <if test="record.clickTime != null">
-        click_time = #{record.clickTime,jdbcType=BIGINT},
+      <if test="record.clicks != null">
+        clicks = #{record.clicks,jdbcType=BIGINT},
       </if>
-      <if test="record.collectTime != null">
-        collect_time = #{record.collectTime,jdbcType=BIGINT},
+      <if test="record.collections != null">
+        collections = #{record.collections,jdbcType=BIGINT},
       </if>
       <if test="record.note != null">
         note = #{record.note,jdbcType=LONGVARCHAR},
@@ -258,8 +258,8 @@
       upload_time = #{record.uploadTime,jdbcType=TIMESTAMP},
       update_time = #{record.updateTime,jdbcType=TIMESTAMP},
       price = #{record.price,jdbcType=DOUBLE},
-      click_time = #{record.clickTime,jdbcType=BIGINT},
-      collect_time = #{record.collectTime,jdbcType=BIGINT},
+      clicks = #{record.clicks,jdbcType=BIGINT},
+      collections = #{record.collections,jdbcType=BIGINT},
       note = #{record.note,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -274,8 +274,8 @@
       upload_time = #{record.uploadTime,jdbcType=TIMESTAMP},
       update_time = #{record.updateTime,jdbcType=TIMESTAMP},
       price = #{record.price,jdbcType=DOUBLE},
-      click_time = #{record.clickTime,jdbcType=BIGINT},
-      collect_time = #{record.collectTime,jdbcType=BIGINT}
+      clicks = #{record.clicks,jdbcType=BIGINT},
+      collections = #{record.collections,jdbcType=BIGINT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -301,11 +301,11 @@
       <if test="price != null">
         price = #{price,jdbcType=DOUBLE},
       </if>
-      <if test="clickTime != null">
-        click_time = #{clickTime,jdbcType=BIGINT},
+      <if test="clicks != null">
+        clicks = #{clicks,jdbcType=BIGINT},
       </if>
-      <if test="collectTime != null">
-        collect_time = #{collectTime,jdbcType=BIGINT},
+      <if test="collections != null">
+        collections = #{collections,jdbcType=BIGINT},
       </if>
       <if test="note != null">
         note = #{note,jdbcType=LONGVARCHAR},
@@ -321,8 +321,8 @@
       upload_time = #{uploadTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       price = #{price,jdbcType=DOUBLE},
-      click_time = #{clickTime,jdbcType=BIGINT},
-      collect_time = #{collectTime,jdbcType=BIGINT},
+      clicks = #{clicks,jdbcType=BIGINT},
+      collections = #{collections,jdbcType=BIGINT},
       note = #{note,jdbcType=LONGVARCHAR}
     where video_id = #{videoId,jdbcType=VARCHAR}
   </update>
@@ -334,8 +334,8 @@
       upload_time = #{uploadTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       price = #{price,jdbcType=DOUBLE},
-      click_time = #{clickTime,jdbcType=BIGINT},
-      collect_time = #{collectTime,jdbcType=BIGINT}
+      clicks = #{clicks,jdbcType=BIGINT},
+      collections = #{collections,jdbcType=BIGINT}
     where video_id = #{videoId,jdbcType=VARCHAR}
   </update>
 </mapper>
