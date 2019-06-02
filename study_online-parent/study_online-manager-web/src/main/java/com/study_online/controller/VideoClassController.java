@@ -21,6 +21,8 @@ public class VideoClassController {
     @RequestMapping("/queryVideoClassByFatherId")
     @ResponseBody
     public List<VideoClass> queryVideoClassByFatherId(String fatherId){
+        if (fatherId==null)
+            fatherId = "0";
         return userService.queryVideoClassByFatherId(fatherId);
     }
 }
