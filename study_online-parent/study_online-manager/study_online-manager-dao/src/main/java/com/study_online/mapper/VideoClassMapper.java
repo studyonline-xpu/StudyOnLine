@@ -3,7 +3,6 @@ package com.study_online.mapper;
 import com.study_online.pojo.VideoClass;
 import com.study_online.pojo.VideoClassExample;
 import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
 
 public interface VideoClassMapper {
@@ -28,4 +27,7 @@ public interface VideoClassMapper {
     int updateByPrimaryKeySelective(VideoClass record);
 
     int updateByPrimaryKey(VideoClass record);
+
+    //自己写的方法
+    List<VideoClass> queryVideoClassByFatherId(String fatherId);
 }

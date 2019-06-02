@@ -1,0 +1,553 @@
+2019-06-02 12:20:28,112 0      [ost-startStop-1] INFO  work.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+2019-06-02 12:20:28,234 122    [ost-startStop-1] INFO  pport.XmlWebApplicationContext  - Refreshing Root WebApplicationContext: startup date [Sun Jun 02 12:20:28 CST 2019]; root of context hierarchy
+2019-06-02 12:20:28,295 183    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\spring\applicationContext-dao.xml]
+2019-06-02 12:20:28,538 426    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\spring\applicationContext-service.xml]
+2019-06-02 12:20:28,723 611    [ost-startStop-1] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2019-06-02 12:20:28,767 655    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\spring\applicationContext-trans.xml]
+2019-06-02 12:20:29,119 1007   [ost-startStop-1] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\properties\db.properties]
+2019-06-02 12:20:29,136 1024   [ost-startStop-1] INFO  redAnnotationBeanPostProcessor  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-06-02 12:20:31,059 2947   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] The service ready on spring started. service: com.study_online.service.TestService, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:31,236 3124   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.TestService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:31,236 3124   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.TestService to url dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449231102, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:31,236 3124   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Register dubbo service com.study_online.service.TestService url dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449231102 to registry registry://47.100.210.244:2181/com.alibaba.dubbo.registry.RegistryService?application=study_online-manager&dubbo=2.5.3&pid=2812&registry=zookeeper&timestamp=1559449231074, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:31,540 3428   [ost-startStop-1] INFO  oting.transport.AbstractServer  -  [DUBBO] Start NettyServer bind /0.0.0.0:20880, export /10.77.114.67:20880, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:31,589 3477   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Load registry store file C:\Users\1456466514\.dubbo\dubbo-registry-47.100.210.244.cache, data: {com.study_online.service.UserService=empty://10.77.114.67/com.study_online.service.UserService?application=study_online-manager-web&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=5948&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449022216 empty://10.77.114.67/com.study_online.service.UserService?application=study_online-manager-web&category=routers&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=5948&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449022216 dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=228&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449019078, com.study_online.service.TestService=empty://10.77.114.67/com.study_online.service.TestService?application=study_online-manager-web&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=5948&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449021052 empty://10.77.114.67/com.study_online.service.TestService?application=study_online-manager-web&category=routers&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=5948&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449021052 dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=228&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449018040}, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:31,627 3515   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+2019-06-02 12:20:31,627 3515   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:host.name=DESKTOP-SQ797H9
+2019-06-02 12:20:31,627 3515   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_171
+2019-06-02 12:20:31,627 3515   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+2019-06-02 12:20:31,627 3515   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.home=E:\LearningTool\jdk8\jre
+2019-06-02 12:20:31,630 3518   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=E:\LearningTool\maven\apache-maven-3.6.0-bin\apache-maven-3.6.0\boot\plexus-classworlds-2.5.2.jar;E:\LearningTool\IDEA\ideaIU-2018.3.4.win\lib\idea_rt.jar
+2019-06-02 12:20:31,630 3518   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=E:\LearningTool\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\LearningTool\jdk8\bin;E:\LearningTool\Tomcat\apache-tomcat-9.0.12-windows-x64\apache-tomcat-9.0.12\lib;E:\LearningTool\Tomcat\apache-tomcat-9.0.12-windows-x64\apache-tomcat-9.0.12\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;E:\LearningTool\MySQLdos\mysql-8.0.11-winx64\mysql-8.0.11-winx64\bin;E:\LearningTool\MySQLdos\bin;E:\LearningTool\maven\apache-maven-3.6.0-bin\apache-maven-3.6.0\bin;E:\LearningTool\Git\Git\cmd;E:\LearningTool\Erlang\erl9.3\bin;C:\Users\1456466514\AppData\Local\Microsoft\WindowsApps;E:\Bandizip\;;.
+2019-06-02 12:20:31,631 3519   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=C:\Users\145646~1\AppData\Local\Temp\
+2019-06-02 12:20:31,631 3519   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+2019-06-02 12:20:31,631 3519   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Windows 10
+2019-06-02 12:20:31,631 3519   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+2019-06-02 12:20:31,631 3519   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.version=10.0
+2019-06-02 12:20:31,633 3521   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.name=1456466514
+2019-06-02 12:20:31,633 3521   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.home=C:\Users\1456466514
+2019-06-02 12:20:31,633 3521   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service
+2019-06-02 12:20:31,635 3523   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=47.100.210.244:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@5848083
+2019-06-02 12:20:31,662 3550   [00.210.244:2181] INFO  .I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+2019-06-02 12:20:31,677 3565   [0.210.244:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 47.100.210.244/47.100.210.244:2181. Will not attempt to authenticate using SASL (unknown error)
+2019-06-02 12:20:31,709 3597   [0.210.244:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Socket connection established to 47.100.210.244/47.100.210.244:2181, initiating session
+2019-06-02 12:20:31,770 3658   [0.210.244:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Session establishment complete on server 47.100.210.244/47.100.210.244:2181, sessionid = 0x16af918c319000e, negotiated timeout = 30000
+2019-06-02 12:20:31,774 3662   [p-1-EventThread] INFO    org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+2019-06-02 12:20:31,779 3667   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Register: dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449231102, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:31,983 3871   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Subscribe: provider://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449231102, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:32,191 4079   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Notify urls for subscribe url provider://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449231102, urls: [empty://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449231102], dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:32,233 4121   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] The service ready on spring started. service: com.study_online.service.UserService, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:32,262 4150   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.UserService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:32,262 4150   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.UserService to url dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449232240, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:32,262 4150   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Register dubbo service com.study_online.service.UserService url dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449232240 to registry registry://47.100.210.244:2181/com.alibaba.dubbo.registry.RegistryService?application=study_online-manager&dubbo=2.5.3&pid=2812&registry=zookeeper&timestamp=1559449232239, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:32,263 4151   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Register: dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449232240, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:32,397 4285   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Subscribe: provider://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449232240, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:32,558 4446   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Notify urls for subscribe url provider://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449232240, urls: [empty://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449232240], dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:20:32,561 4449   [ost-startStop-1] INFO  work.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 4448 ms
+2019-06-02 12:21:55,954 87842  [:20880-thread-2] ERROR bbo.rpc.filter.ExceptionFilter  -  [DUBBO] Got unchecked and undeclared exception which called by 10.77.114.67. service: com.study_online.service.TestService, method: queryNow, exception: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow, dubbo version: 2.5.3, current host: 127.0.0.1
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:189)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy33.queryNow(Unknown Source)
+	at com.study_online.impl.TestServiceImpl.queryNow(TestServiceImpl.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy36.queryNow(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper0.invokeMethod(Wrapper0.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-06-02 12:21:59,453 91341  [:20880-thread-3] ERROR bbo.rpc.filter.ExceptionFilter  -  [DUBBO] Got unchecked and undeclared exception which called by 10.77.114.67. service: com.study_online.service.TestService, method: queryNow, exception: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow, dubbo version: 2.5.3, current host: 127.0.0.1
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:189)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy33.queryNow(Unknown Source)
+	at com.study_online.impl.TestServiceImpl.queryNow(TestServiceImpl.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy36.queryNow(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper0.invokeMethod(Wrapper0.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-06-02 12:23:46,091 197979 [:20880-thread-4] ERROR bbo.rpc.filter.ExceptionFilter  -  [DUBBO] Got unchecked and undeclared exception which called by 10.77.114.67. service: com.study_online.service.UserService, method: queryVideoClassByFatherId, exception: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.VideoClassMapper.queryVideoClassByFatherId, dubbo version: 2.5.3, current host: 127.0.0.1
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.VideoClassMapper.queryVideoClassByFatherId
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:189)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy37.queryVideoClassByFatherId(Unknown Source)
+	at com.study_online.impl.UserServiceImpl.queryVideoClassByFatherId(UserServiceImpl.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy38.queryVideoClassByFatherId(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-06-02 12:24:09,470 221358 [:20880-thread-5] ERROR bbo.rpc.filter.ExceptionFilter  -  [DUBBO] Got unchecked and undeclared exception which called by 10.77.114.67. service: com.study_online.service.TestService, method: queryNow, exception: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow, dubbo version: 2.5.3, current host: 127.0.0.1
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:189)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy33.queryNow(Unknown Source)
+	at com.study_online.impl.TestServiceImpl.queryNow(TestServiceImpl.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy36.queryNow(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper0.invokeMethod(Wrapper0.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-06-02 12:24:50,722 262610 [w I/O worker #1] WARN  oting.transport.AbstractServer  -  [DUBBO] All clients has discontected from /10.77.114.67:20880. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:24:50,724 262612 [:20880-thread-7] INFO  c.protocol.dubbo.DubboProtocol  -  [DUBBO] disconected from /10.77.114.67:51454,url:dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.study_online.service.TestService&methods=queryNow&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449231102, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:25:04,851 276739 [:20880-thread-9] ERROR bbo.rpc.filter.ExceptionFilter  -  [DUBBO] Got unchecked and undeclared exception which called by 10.77.114.67. service: com.study_online.service.TestService, method: queryNow, exception: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow, dubbo version: 2.5.3, current host: 127.0.0.1
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:189)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy33.queryNow(Unknown Source)
+	at com.study_online.impl.TestServiceImpl.queryNow(TestServiceImpl.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy36.queryNow(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper0.invokeMethod(Wrapper0.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-06-02 12:25:08,509 280397 [20880-thread-10] ERROR bbo.rpc.filter.ExceptionFilter  -  [DUBBO] Got unchecked and undeclared exception which called by 10.77.114.67. service: com.study_online.service.TestService, method: queryNow, exception: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow, dubbo version: 2.5.3, current host: 127.0.0.1
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:189)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy33.queryNow(Unknown Source)
+	at com.study_online.impl.TestServiceImpl.queryNow(TestServiceImpl.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy36.queryNow(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper0.invokeMethod(Wrapper0.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-06-02 12:27:17,497 0      [ost-startStop-1] INFO  work.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+2019-06-02 12:27:17,633 136    [ost-startStop-1] INFO  pport.XmlWebApplicationContext  - Refreshing Root WebApplicationContext: startup date [Sun Jun 02 12:27:17 CST 2019]; root of context hierarchy
+2019-06-02 12:27:17,820 323    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\spring\applicationContext-dao.xml]
+2019-06-02 12:27:18,098 601    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\spring\applicationContext-service.xml]
+2019-06-02 12:27:18,257 760    [ost-startStop-1] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2019-06-02 12:27:18,314 817    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\spring\applicationContext-trans.xml]
+2019-06-02 12:27:18,694 1197   [ost-startStop-1] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\properties\db.properties]
+2019-06-02 12:27:18,707 1210   [ost-startStop-1] INFO  redAnnotationBeanPostProcessor  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-06-02 12:27:20,207 2710   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] The service ready on spring started. service: com.study_online.service.TestService, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:20,326 2829   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.TestService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:20,326 2829   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.TestService to url dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449640234, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:20,327 2830   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Register dubbo service com.study_online.service.TestService url dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449640234 to registry registry://47.100.210.244:2181/com.alibaba.dubbo.registry.RegistryService?application=study_online-manager&dubbo=2.5.3&pid=6132&registry=zookeeper&timestamp=1559449640215, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:20,878 3381   [ost-startStop-1] INFO  oting.transport.AbstractServer  -  [DUBBO] Start NettyServer bind /0.0.0.0:20880, export /10.77.114.67:20880, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:20,906 3409   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Load registry store file C:\Users\1456466514\.dubbo\dubbo-registry-47.100.210.244.cache, data: {com.study_online.service.UserService=empty://10.77.114.67/com.study_online.service.UserService?application=study_online-manager-web&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=6120&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449499180 empty://10.77.114.67/com.study_online.service.UserService?application=study_online-manager-web&category=routers&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=6120&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449499180 dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449232240, com.study_online.service.TestService=empty://10.77.114.67/com.study_online.service.TestService?application=study_online-manager-web&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=6120&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449498004 empty://10.77.114.67/com.study_online.service.TestService?application=study_online-manager-web&category=routers&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=6120&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449498004 dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=2812&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449231102}, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:21,085 3588   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+2019-06-02 12:27:21,085 3588   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:host.name=DESKTOP-SQ797H9
+2019-06-02 12:27:21,086 3589   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_171
+2019-06-02 12:27:21,086 3589   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+2019-06-02 12:27:21,086 3589   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.home=E:\LearningTool\jdk8\jre
+2019-06-02 12:27:21,086 3589   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=E:\LearningTool\maven\apache-maven-3.6.0-bin\apache-maven-3.6.0\boot\plexus-classworlds-2.5.2.jar;E:\LearningTool\IDEA\ideaIU-2018.3.4.win\lib\idea_rt.jar
+2019-06-02 12:27:21,086 3589   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=E:\LearningTool\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\LearningTool\jdk8\bin;E:\LearningTool\Tomcat\apache-tomcat-9.0.12-windows-x64\apache-tomcat-9.0.12\lib;E:\LearningTool\Tomcat\apache-tomcat-9.0.12-windows-x64\apache-tomcat-9.0.12\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;E:\LearningTool\MySQLdos\mysql-8.0.11-winx64\mysql-8.0.11-winx64\bin;E:\LearningTool\MySQLdos\bin;E:\LearningTool\maven\apache-maven-3.6.0-bin\apache-maven-3.6.0\bin;E:\LearningTool\Git\Git\cmd;E:\LearningTool\Erlang\erl9.3\bin;C:\Users\1456466514\AppData\Local\Microsoft\WindowsApps;E:\Bandizip\;;.
+2019-06-02 12:27:21,086 3589   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=C:\Users\145646~1\AppData\Local\Temp\
+2019-06-02 12:27:21,086 3589   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+2019-06-02 12:27:21,086 3589   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Windows 10
+2019-06-02 12:27:21,086 3589   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+2019-06-02 12:27:21,087 3590   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.version=10.0
+2019-06-02 12:27:21,087 3590   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.name=1456466514
+2019-06-02 12:27:21,087 3590   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.home=C:\Users\1456466514
+2019-06-02 12:27:21,087 3590   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service
+2019-06-02 12:27:21,088 3591   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=47.100.210.244:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@29d6bf8c
+2019-06-02 12:27:21,174 3677   [00.210.244:2181] INFO  .I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+2019-06-02 12:27:21,212 3715   [0.210.244:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 47.100.210.244/47.100.210.244:2181. Will not attempt to authenticate using SASL (unknown error)
+2019-06-02 12:27:21,246 3749   [0.210.244:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Socket connection established to 47.100.210.244/47.100.210.244:2181, initiating session
+2019-06-02 12:27:21,287 3790   [0.210.244:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Session establishment complete on server 47.100.210.244/47.100.210.244:2181, sessionid = 0x16af918c3190011, negotiated timeout = 30000
+2019-06-02 12:27:21,290 3793   [p-1-EventThread] INFO    org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+2019-06-02 12:27:21,294 3797   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Register: dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449640234, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:21,585 4088   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Subscribe: provider://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449640234, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:21,810 4313   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Notify urls for subscribe url provider://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449640234, urls: [empty://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449640234], dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:21,869 4372   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] The service ready on spring started. service: com.study_online.service.UserService, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:21,882 4385   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.UserService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:21,882 4385   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.UserService to url dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449641874, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:21,882 4385   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Register dubbo service com.study_online.service.UserService url dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449641874 to registry registry://47.100.210.244:2181/com.alibaba.dubbo.registry.RegistryService?application=study_online-manager&dubbo=2.5.3&pid=6132&registry=zookeeper&timestamp=1559449641873, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:21,883 4386   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Register: dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449641874, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:22,034 4537   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Subscribe: provider://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449641874, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:22,213 4716   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Notify urls for subscribe url provider://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449641874, urls: [empty://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449641874], dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:27:22,218 4721   [ost-startStop-1] INFO  work.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 4719 ms
+2019-06-02 12:27:44,759 27262  [:20880-thread-2] ERROR bbo.rpc.filter.ExceptionFilter  -  [DUBBO] Got unchecked and undeclared exception which called by 10.77.114.67. service: com.study_online.service.TestService, method: queryNow, exception: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow, dubbo version: 2.5.3, current host: 127.0.0.1
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.TestMapper.queryNow
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:189)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy33.queryNow(Unknown Source)
+	at com.study_online.impl.TestServiceImpl.queryNow(TestServiceImpl.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy36.queryNow(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper0.invokeMethod(Wrapper0.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-06-02 12:28:56,314 98817  [w I/O worker #1] WARN  oting.transport.AbstractServer  -  [DUBBO] All clients has discontected from /10.77.114.67:20880. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:28:56,315 98818  [:20880-thread-4] INFO  c.protocol.dubbo.DubboProtocol  -  [DUBBO] disconected from /10.77.114.67:51645,url:dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.study_online.service.TestService&methods=queryNow&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449640234, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:29:17,661 120164 [:20880-thread-6] ERROR bbo.rpc.filter.ExceptionFilter  -  [DUBBO] Got unchecked and undeclared exception which called by 10.77.114.67. service: com.study_online.service.UserService, method: queryVideoClassByFatherId, exception: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.VideoClassMapper.queryVideoClassByFatherId, dubbo version: 2.5.3, current host: 127.0.0.1
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.study_online.mapper.VideoClassMapper.queryVideoClassByFatherId
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:189)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy37.queryVideoClassByFatherId(Unknown Source)
+	at com.study_online.impl.UserServiceImpl.queryVideoClassByFatherId(UserServiceImpl.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy38.queryVideoClassByFatherId(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-06-02 12:43:56,157 0      [ost-startStop-1] INFO  work.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+2019-06-02 12:43:56,232 75     [ost-startStop-1] INFO  pport.XmlWebApplicationContext  - Refreshing Root WebApplicationContext: startup date [Sun Jun 02 12:43:56 CST 2019]; root of context hierarchy
+2019-06-02 12:43:56,270 113    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\spring\applicationContext-dao.xml]
+2019-06-02 12:43:56,387 230    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\spring\applicationContext-service.xml]
+2019-06-02 12:43:56,478 321    [ost-startStop-1] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2019-06-02 12:43:56,505 348    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\spring\applicationContext-trans.xml]
+2019-06-02 12:43:56,649 492    [ost-startStop-1] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from file [D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service\target\classes\properties\db.properties]
+2019-06-02 12:43:56,658 501    [ost-startStop-1] INFO  redAnnotationBeanPostProcessor  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-06-02 12:43:57,573 1416   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] The service ready on spring started. service: com.study_online.service.TestService, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:57,658 1501   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.TestService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:57,658 1501   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.TestService to url dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450637592, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:57,658 1501   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Register dubbo service com.study_online.service.TestService url dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450637592 to registry registry://47.100.210.244:2181/com.alibaba.dubbo.registry.RegistryService?application=study_online-manager&dubbo=2.5.3&pid=4232&registry=zookeeper&timestamp=1559450637579, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:57,792 1635   [ost-startStop-1] INFO  oting.transport.AbstractServer  -  [DUBBO] Start NettyServer bind /0.0.0.0:20880, export /10.77.114.67:20880, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:57,807 1650   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Load registry store file C:\Users\1456466514\.dubbo\dubbo-registry-47.100.210.244.cache, data: {com.study_online.service.UserService=empty://10.77.114.67/com.study_online.service.UserService?application=study_online-manager-web&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=7180&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449745596 empty://10.77.114.67/com.study_online.service.UserService?application=study_online-manager-web&category=routers&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=7180&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449745596 dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449641874, com.study_online.service.TestService=empty://10.77.114.67/com.study_online.service.TestService?application=study_online-manager-web&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=7180&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449744456 empty://10.77.114.67/com.study_online.service.TestService?application=study_online-manager-web&category=routers&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=7180&revision=1.0-SNAPSHOT&side=consumer&timestamp=1559449744456 dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=6132&revision=1.0-SNAPSHOT&side=provider&timestamp=1559449640234}, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:57,816 1659   [00.210.244:2181] INFO  .I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+2019-06-02 12:43:57,841 1684   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+2019-06-02 12:43:57,841 1684   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:host.name=DESKTOP-SQ797H9
+2019-06-02 12:43:57,841 1684   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_171
+2019-06-02 12:43:57,841 1684   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+2019-06-02 12:43:57,841 1684   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.home=E:\LearningTool\jdk8\jre
+2019-06-02 12:43:57,841 1684   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=E:\LearningTool\maven\apache-maven-3.6.0-bin\apache-maven-3.6.0\boot\plexus-classworlds-2.5.2.jar;E:\LearningTool\IDEA\ideaIU-2018.3.4.win\lib\idea_rt.jar
+2019-06-02 12:43:57,841 1684   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=E:\LearningTool\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\LearningTool\jdk8\bin;E:\LearningTool\Tomcat\apache-tomcat-9.0.12-windows-x64\apache-tomcat-9.0.12\lib;E:\LearningTool\Tomcat\apache-tomcat-9.0.12-windows-x64\apache-tomcat-9.0.12\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;E:\LearningTool\MySQLdos\mysql-8.0.11-winx64\mysql-8.0.11-winx64\bin;E:\LearningTool\MySQLdos\bin;E:\LearningTool\maven\apache-maven-3.6.0-bin\apache-maven-3.6.0\bin;E:\LearningTool\Git\Git\cmd;E:\LearningTool\Erlang\erl9.3\bin;C:\Users\1456466514\AppData\Local\Microsoft\WindowsApps;E:\Bandizip\;;.
+2019-06-02 12:43:57,842 1685   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=C:\Users\145646~1\AppData\Local\Temp\
+2019-06-02 12:43:57,842 1685   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+2019-06-02 12:43:57,842 1685   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Windows 10
+2019-06-02 12:43:57,842 1685   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+2019-06-02 12:43:57,842 1685   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.version=10.0
+2019-06-02 12:43:57,842 1685   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.name=1456466514
+2019-06-02 12:43:57,842 1685   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.home=C:\Users\1456466514
+2019-06-02 12:43:57,842 1685   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=D:\IDEAworkspace\study_online\study_online-parent\study_online-manager\study_online-manager-service
+2019-06-02 12:43:57,843 1686   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=47.100.210.244:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@28aa1871
+2019-06-02 12:43:57,862 1705   [0.210.244:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 47.100.210.244/47.100.210.244:2181. Will not attempt to authenticate using SASL (unknown error)
+2019-06-02 12:43:57,896 1739   [0.210.244:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Socket connection established to 47.100.210.244/47.100.210.244:2181, initiating session
+2019-06-02 12:43:57,934 1777   [0.210.244:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Session establishment complete on server 47.100.210.244/47.100.210.244:2181, sessionid = 0x16af918c3190014, negotiated timeout = 30000
+2019-06-02 12:43:57,935 1778   [p-1-EventThread] INFO    org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+2019-06-02 12:43:57,937 1780   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Register: dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450637592, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:58,090 1933   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Subscribe: provider://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450637592, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:58,280 2123   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Notify urls for subscribe url provider://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450637592, urls: [empty://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.TestService&methods=queryNow&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450637592], dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:58,304 2147   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] The service ready on spring started. service: com.study_online.service.UserService, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:58,310 2153   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.UserService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:58,310 2153   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service com.study_online.service.UserService to url dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450638307, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:58,310 2153   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Register dubbo service com.study_online.service.UserService url dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450638307 to registry registry://47.100.210.244:2181/com.alibaba.dubbo.registry.RegistryService?application=study_online-manager&dubbo=2.5.3&pid=4232&registry=zookeeper&timestamp=1559450638306, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:58,311 2154   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Register: dubbo://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450638307, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:58,452 2295   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Subscribe: provider://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450638307, dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:58,620 2463   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Notify urls for subscribe url provider://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450638307, urls: [empty://10.77.114.67:20880/com.study_online.service.UserService?anyhost=true&application=study_online-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.study_online.service.UserService&methods=queryVideoClassByFatherId&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450638307], dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:43:58,623 2466   [ost-startStop-1] INFO  work.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 2465 ms
+2019-06-02 12:44:44,799 48642  [:20880-thread-2] INFO  aba.druid.pool.DruidDataSource  - {dataSource-1} inited
+2019-06-02 12:45:04,706 68549  [w I/O worker #1] WARN  oting.transport.AbstractServer  -  [DUBBO] All clients has discontected from /10.77.114.67:20880. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+2019-06-02 12:45:04,707 68550  [:20880-thread-5] INFO  c.protocol.dubbo.DubboProtocol  -  [DUBBO] disconected from /10.77.114.67:51936,url:dubbo://10.77.114.67:20880/com.study_online.service.TestService?anyhost=true&application=study_online-manager&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.study_online.service.TestService&methods=queryNow&pid=4232&revision=1.0-SNAPSHOT&side=provider&timestamp=1559450637592, dubbo version: 2.5.3, current host: 127.0.0.1

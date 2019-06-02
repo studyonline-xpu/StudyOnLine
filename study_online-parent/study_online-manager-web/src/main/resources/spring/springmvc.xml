@@ -9,15 +9,18 @@
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
+    <!--开启spring注解扫描的包 控制类-->
     <context:component-scan base-package="com.study_online.controller" />
+    <!--开启springMVC注解的支持-->
     <mvc:annotation-driven />
-    <bean
-            class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <!--配置视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
     </bean>
     <!-- 引用dubbo服务 -->
     <dubbo:application name="study_online-manager-web"/>
     <dubbo:registry protocol="zookeeper" address="47.100.210.244:2181"/>
-    <dubbo:reference interface="com.study_online.service.TestService" id="testService" check="false"></dubbo:reference>
+    <dubbo:reference interface="com.study_online.service.TestService" id="testService" timeout="300000"></dubbo:reference>
+    <dubbo:reference interface="com.study_online.service.UserService" id="userService" timeout="300000"></dubbo:reference>
 </beans>

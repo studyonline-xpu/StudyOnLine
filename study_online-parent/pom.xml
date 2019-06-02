@@ -8,8 +8,12 @@
     <artifactId>study_online-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <modules>
+        <module>study_online-common</module>
+        <module>study_online-manager</module>
+        <module>study_online-manager-web</module>
+    </modules>
 
-    <name>study_online-parent</name>
     <!-- 集中定义依赖版本号 -->
     <properties>
         <junit.version>4.12</junit.version>

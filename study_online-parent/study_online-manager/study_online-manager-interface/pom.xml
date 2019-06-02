@@ -11,8 +11,6 @@
 
     <artifactId>study_online-manager-interface</artifactId>
     <packaging>jar</packaging>
-    <name>study_online-manager-interface</name>
-
 
     <dependencies>
         <dependency>

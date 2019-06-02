@@ -193,4 +193,8 @@
       is_father = #{isFather,jdbcType=BIT}
     where class_id = #{classId,jdbcType=VARCHAR}
   </update>
+<!--  自己写的方法-->
+  <select id="queryVideoClassByFatherId" resultMap="BaseResultMap">
+    select * from video_class where father_id = #{fatherId}
+  </select>
 </mapper>
