@@ -1,0 +1,3 @@
+<!--pages/other/other.wxml-->
+<text>pages/other/other.wxml</text>
+<video src='http://101.132.78.78:80/group1/M00/00/00/rBOl6VzyTNCAHiB9AKAbe6jPrCo926.mp4' binderror="videoErrorCallback"></video>
