@@ -24,6 +24,8 @@ public class Video implements Serializable {
 
     private String note;
 
+    private String picture;
+
     private static final long serialVersionUID = 1L;
 
     public String getVideoId() {
@@ -104,5 +106,13 @@ public class Video implements Serializable {
 
     public void setNote(String note) {
         this.note = note == null ? null : note.trim();
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture == null ? null : picture.trim();
     }
 }
