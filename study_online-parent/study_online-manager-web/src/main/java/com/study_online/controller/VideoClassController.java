@@ -25,4 +25,5 @@ public class VideoClassController {
             fatherId = "0";
         return userService.queryVideoClassByFatherId(fatherId);
     }
+
 }
