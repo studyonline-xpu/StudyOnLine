@@ -32,6 +32,7 @@
     <dubbo:service interface="com.study_online.service.TestService" ref="testServiceImpl" />
     <dubbo:service interface="com.study_online.service.UserService" ref="userServiceImpl" />
     <dubbo:service interface="com.study_online.service.VideoService" ref="videoServiceImpl" />
+    <dubbo:service interface="com.study_online.service.CatalogService" ref="catalogServiceImpl" />
 
 
 </beans>

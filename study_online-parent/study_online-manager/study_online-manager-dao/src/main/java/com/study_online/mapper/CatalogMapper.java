@@ -34,4 +34,6 @@ public interface CatalogMapper {
     int updateByPrimaryKeyWithBLOBs(Catalog record);
 
     int updateByPrimaryKey(Catalog record);
+
+    void selectByExampleWithBLOBs();
 }

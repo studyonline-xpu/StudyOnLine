@@ -24,7 +24,6 @@ public class VideoServiceImpl implements VideoService {
         VideoExample.Criteria criteria = example.createCriteria();
         criteria.andClassIdEqualTo(classId);
         List<Video> videos = videoMapper.selectByExampleWithBLOBs(example);
-        System.out.println(videos.get(0).getPicture());
         return videos;
     }
 }
