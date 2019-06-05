@@ -684,6 +684,66 @@ public class VideoExample {
             addCriterion("collections not between", value1, value2, "collections");
             return (Criteria) this;
         }
+
+        public Criteria andLikesIsNull() {
+            addCriterion("likes is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLikesIsNotNull() {
+            addCriterion("likes is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLikesEqualTo(Long value) {
+            addCriterion("likes =", value, "likes");
+            return (Criteria) this;
+        }
+
+        public Criteria andLikesNotEqualTo(Long value) {
+            addCriterion("likes <>", value, "likes");
+            return (Criteria) this;
+        }
+
+        public Criteria andLikesGreaterThan(Long value) {
+            addCriterion("likes >", value, "likes");
+            return (Criteria) this;
+        }
+
+        public Criteria andLikesGreaterThanOrEqualTo(Long value) {
+            addCriterion("likes >=", value, "likes");
+            return (Criteria) this;
+        }
+
+        public Criteria andLikesLessThan(Long value) {
+            addCriterion("likes <", value, "likes");
+            return (Criteria) this;
+        }
+
+        public Criteria andLikesLessThanOrEqualTo(Long value) {
+            addCriterion("likes <=", value, "likes");
+            return (Criteria) this;
+        }
+
+        public Criteria andLikesIn(List<Long> values) {
+            addCriterion("likes in", values, "likes");
+            return (Criteria) this;
+        }
+
+        public Criteria andLikesNotIn(List<Long> values) {
+            addCriterion("likes not in", values, "likes");
+            return (Criteria) this;
+        }
+
+        public Criteria andLikesBetween(Long value1, Long value2) {
+            addCriterion("likes between", value1, value2, "likes");
+            return (Criteria) this;
+        }
+
+        public Criteria andLikesNotBetween(Long value1, Long value2) {
+            addCriterion("likes not between", value1, value2, "likes");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

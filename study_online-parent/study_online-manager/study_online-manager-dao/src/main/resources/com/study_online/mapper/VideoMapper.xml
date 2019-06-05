@@ -11,6 +11,7 @@
     <result column="price" jdbcType="DOUBLE" property="price" />
     <result column="clicks" jdbcType="BIGINT" property="clicks" />
     <result column="collections" jdbcType="BIGINT" property="collections" />
+    <result column="likes" jdbcType="BIGINT" property="likes" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.study_online.pojo.Video">
     <result column="note" jdbcType="LONGVARCHAR" property="note" />
@@ -76,7 +77,7 @@
   </sql>
   <sql id="Base_Column_List">
     video_id, video_name, user_id, class_id, upload_time, update_time, price, clicks, 
-    collections
+    collections, likes
   </sql>
   <sql id="Blob_Column_List">
     note, picture
@@ -133,11 +134,13 @@
     insert into video (video_id, video_name, user_id, 
       class_id, upload_time, update_time, 
       price, clicks, collections, 
-      note, picture)
+      likes, note, picture
+      )
     values (#{videoId,jdbcType=VARCHAR}, #{videoName,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, 
       #{classId,jdbcType=VARCHAR}, #{uploadTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
       #{price,jdbcType=DOUBLE}, #{clicks,jdbcType=BIGINT}, #{collections,jdbcType=BIGINT}, 
-      #{note,jdbcType=LONGVARCHAR}, #{picture,jdbcType=LONGVARCHAR})
+      #{likes,jdbcType=BIGINT}, #{note,jdbcType=LONGVARCHAR}, #{picture,jdbcType=LONGVARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.study_online.pojo.Video">
     insert into video
@@ -168,6 +171,9 @@
       </if>
       <if test="collections != null">
         collections,
+      </if>
+      <if test="likes != null">
+        likes,
       </if>
       <if test="note != null">
         note,
@@ -203,6 +209,9 @@
       </if>
       <if test="collections != null">
         #{collections,jdbcType=BIGINT},
+      </if>
+      <if test="likes != null">
+        #{likes,jdbcType=BIGINT},
       </if>
       <if test="note != null">
         #{note,jdbcType=LONGVARCHAR},
@@ -248,6 +257,9 @@
       <if test="record.collections != null">
         collections = #{record.collections,jdbcType=BIGINT},
       </if>
+      <if test="record.likes != null">
+        likes = #{record.likes,jdbcType=BIGINT},
+      </if>
       <if test="record.note != null">
         note = #{record.note,jdbcType=LONGVARCHAR},
       </if>
@@ -270,6 +282,7 @@
       price = #{record.price,jdbcType=DOUBLE},
       clicks = #{record.clicks,jdbcType=BIGINT},
       collections = #{record.collections,jdbcType=BIGINT},
+      likes = #{record.likes,jdbcType=BIGINT},
       note = #{record.note,jdbcType=LONGVARCHAR},
       picture = #{record.picture,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
@@ -286,7 +299,8 @@
       update_time = #{record.updateTime,jdbcType=TIMESTAMP},
       price = #{record.price,jdbcType=DOUBLE},
       clicks = #{record.clicks,jdbcType=BIGINT},
-      collections = #{record.collections,jdbcType=BIGINT}
+      collections = #{record.collections,jdbcType=BIGINT},
+      likes = #{record.likes,jdbcType=BIGINT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -318,6 +332,9 @@
       <if test="collections != null">
         collections = #{collections,jdbcType=BIGINT},
       </if>
+      <if test="likes != null">
+        likes = #{likes,jdbcType=BIGINT},
+      </if>
       <if test="note != null">
         note = #{note,jdbcType=LONGVARCHAR},
       </if>
@@ -337,6 +354,7 @@
       price = #{price,jdbcType=DOUBLE},
       clicks = #{clicks,jdbcType=BIGINT},
       collections = #{collections,jdbcType=BIGINT},
+      likes = #{likes,jdbcType=BIGINT},
       note = #{note,jdbcType=LONGVARCHAR},
       picture = #{picture,jdbcType=LONGVARCHAR}
     where video_id = #{videoId,jdbcType=VARCHAR}
@@ -350,7 +368,8 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       price = #{price,jdbcType=DOUBLE},
       clicks = #{clicks,jdbcType=BIGINT},
-      collections = #{collections,jdbcType=BIGINT}
+      collections = #{collections,jdbcType=BIGINT},
+      likes = #{likes,jdbcType=BIGINT}
     where video_id = #{videoId,jdbcType=VARCHAR}
   </update>
 </mapper>

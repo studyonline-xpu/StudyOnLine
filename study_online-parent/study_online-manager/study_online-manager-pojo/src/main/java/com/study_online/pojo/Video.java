@@ -22,6 +22,8 @@ public class Video implements Serializable {
 
     private Long collections;
 
+    private Long likes;
+
     private String note;
 
     private String picture;
@@ -98,6 +100,14 @@ public class Video implements Serializable {
 
     public void setCollections(Long collections) {
         this.collections = collections;
+    }
+
+    public Long getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Long likes) {
+        this.likes = likes;
     }
 
     public String getNote() {

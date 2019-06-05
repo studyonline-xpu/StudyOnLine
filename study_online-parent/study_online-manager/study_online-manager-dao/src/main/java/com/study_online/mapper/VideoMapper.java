@@ -3,7 +3,6 @@ package com.study_online.mapper;
 import com.study_online.pojo.Video;
 import com.study_online.pojo.VideoExample;
 import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
 
 public interface VideoMapper {
