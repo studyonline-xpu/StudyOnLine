@@ -6,15 +6,20 @@ Page({
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
-    console.log("onLoad");
     var that=this;
     var coursesArr = util.getCourses();
     that.setData({
       courses:coursesArr
     });
-    console.log("onLoad");
-    console.log(coursesArr);
-    console.log("onLoad");
+    // var _this = this;
+    // wx.request({
+    //   url: 'http://192.168.137.248:8081/videoClass/queryVideoClassByFatherId',
+    //   success: function(res) {
+    //     _this.setData({
+    //       courses: res.data
+    //     })
+    //   }
+    // })
   },
   onReady:function(){
     // 页面渲染完成

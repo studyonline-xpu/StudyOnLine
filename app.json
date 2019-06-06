@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/course/course",
     "pages/mystudy/mystudy",
-    "pages/accounts/accounts",
+    "pages/more/more",
     "pages/other/other",
     "pages/logs/logs"
   ],
@@ -39,7 +39,7 @@
         "selectedIconPath":"images/tab_mystudy2.png"
       },
       {
-        "pagePath":"pages/accounts/accounts",
+        "pagePath":"pages/more/more",
         "text":"帐号",
         "iconPath":"images/tab_account1.png",
         "selectedIconPath":"images/tab_account1.png"

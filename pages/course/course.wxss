@@ -22,7 +22,7 @@
     padding-left: 15rpx;
 }
 .active{
-    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAgCAMAAAAG5/lRAAAAG1BMVEUswXsswXsswXsswXsswXsswXsswXsswXsswXtaAxkkAAAACXRSTlMeuvm7/7/8+h+BS0OnAAAAKUlEQVQI12NgYGRiYmRgYGYBAlYGJhDFxsACBkONgjoe6hUGZiZ2Zg4AQTYC7mhM57gAAAAASUVORK5CYII=") left no-repeat;
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAgCAMAAAAG5/lRAAAAG1BMVEUswXsswXsswXsswXsswXsswXsswXsswXsswXtaAxkkAAAACXRSTlMeuvm7/7/8+h+BS0OnAAAAKUlEQVQI12NgYGRiYmRgYGYBAlYGJhDFxsACBkONgjoe6hUGZiZ2Zg4AQTYC7mhM57gAAAAASUVORK5CYII=") left no-repeat;  
     background-size: 5rpx 60rpx;
 }
 .active text{
