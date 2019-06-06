@@ -24,11 +24,4 @@ public class CatalogController {
     public List<Catalog> queryChapters(String video_id){
         return catalogService.queryChapter(video_id);
     }
-
-    @RequestMapping("/queryVideoCatalog")
-    @ResponseBody
-    public List<Catalog> queryVideoCatalog(String chapter_id){
-        return catalogService.queryVideoCatalog(chapter_id);
-    }
-
 }

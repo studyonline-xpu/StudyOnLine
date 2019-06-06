@@ -11,5 +11,4 @@ import java.util.List;
 
 public interface CatalogService {
     public List<Catalog> queryChapter(String video_id);
-    public List<Catalog> queryVideoCatalog(String chapter_id);
 }

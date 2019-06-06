@@ -320,4 +320,15 @@
       upload_time = #{uploadTime,jdbcType=TIMESTAMP}
     where catalog_id = #{catalogId,jdbcType=VARCHAR}
   </update>
+  <!--根据视频id获取章节信息-->
+  <select id="queryChapter" resultMap="ResultMapWithBLOBs">
+    select * from catalog
+    where video_id = #{video_id}
+        and father_id = '0'
+        order by catalog_id asc
+  </select>
+  <!-- 根据章节id获取章节的所有视频的集合 -->
+  <select id="queryCatalogsByFatherId" resultMap="ResultMapWithBLOBs">
+    select * from catalog where father_id = #{fatherId} order by catalog_id asc
+  </select>
 </mapper>

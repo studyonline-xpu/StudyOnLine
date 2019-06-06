@@ -36,4 +36,20 @@ public interface CatalogMapper {
     int updateByPrimaryKey(Catalog record);
 
     void selectByExampleWithBLOBs();
+
+    //自己写的方法
+
+    /**
+     * 根据视频id获取章节信息
+     * @param video_id 视频id
+     * @return
+     */
+    List<Catalog> queryChapter(String video_id);
+
+    /**
+     * 根据章节id查询此章节目录集合
+     * @param fatherId 章节id
+     * @return
+     */
+    List<Catalog> queryCatalogsByFatherId(String fatherId);
 }
