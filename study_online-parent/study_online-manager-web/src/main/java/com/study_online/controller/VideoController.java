@@ -19,7 +19,7 @@ import java.util.List;
 public class VideoController {
     @Autowired
     VideoService videoService;
-    @RequestMapping("queryVideoByClassId")
+    @RequestMapping("/queryVideoByClassId")
     @ResponseBody
     public List<Video> queryVideoByClassId(String classId){
         return videoService.queryVideoByClassId(classId);
