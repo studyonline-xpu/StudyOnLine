@@ -5,7 +5,8 @@
     "pages/mystudy/mystudy",
     "pages/more/more",
     "pages/other/other",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/div/div"
   ],
   "window":{
     "backgroundColor":"#31a030",

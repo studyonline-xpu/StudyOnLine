@@ -1,0 +1,27 @@
+<!-- 热门推荐、动画区Item -->
+<template name="jiefItem1">
+    <!-- List Item begin -->
+    <view class="content-list">
+    <navigator class="item" url='{{navigate}}'>
+        <view class="top">
+        <view class="cover-img" 
+        style="opacity: 1; background-image: url({{picture}});">
+        </view>
+        </view>
+        <view class="info">
+        <view class="title">{{videoName}}</view>
+        <view class="meta clearfix">
+            <view class="cell left">
+                <view class="bilibili-index-sprite bilibili-index-play"></view>
+                <text>{{clicks}}</text>
+            </view>
+            <view class="cell left">
+                <view class="bilibili-index-sprite bilibili-index-danmu"></view>
+                <text>{{collections}}</text>
+            </view>
+        </view>
+        </view>
+    </navigator>
+    </view>
+    <!-- List Item end -->
+</template>

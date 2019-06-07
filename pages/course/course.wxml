@@ -6,7 +6,7 @@
       <view class="courses-left">
           <block wx:for="{{courses}}" wx:for-index="couIdx" wx:for-item="couItem">
               <view data-index="{{couIdx}}" class="{{couItem.active=='true'?'active':''}}"  bindtap="selectTab">
-                  <text>{{couItem.title}}</text>
+                  <text>{{couItem.className}}</text>
               </view>
           </block>
       </view>
@@ -20,12 +20,10 @@
                           </navigator>
                       </view>
                   </block>
-                  <block wx:for="{{couItem.category.item}}" wx:for-index="idx" wx:for-item="item">
+                  <block wx:for="{{detailCourse}}" wx:for-index="idx" wx:for-item="item">
                       <view class="couList">
-                          <text>{{item.title}}</text>
-                          <block wx:for="{{item.stdCourse}}" wx:for-item="stdItem">
-                              <navigator url="{{stdItem.url}}">{{stdItem.title}}</navigator>
-                          </block>
+                        <text class='navigator' style='color:#999;' bindtap='navigatorToSourse' id='{{item.classId}}'>
+                        {{item.className}}</text>
                       </view>
                   </block>
               </view>

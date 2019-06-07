@@ -51,8 +51,7 @@
     display: block;
     color:#000;
 }
-.couList navigator{
-    color:#999;
+.navigator{
     display: inline-block;
     padding-right: 50rpx;
 }

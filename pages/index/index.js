@@ -21,7 +21,6 @@ Page({
   },
   /*点击banner上的圆选择相应的图片 */
   bindStlBanner:function(e){
-    console.log(e);
     var that = this;
     var bannerIdx = e.currentTarget.dataset.index;
       clearTimeout(that.data.banner.timeoutProcess);
@@ -29,7 +28,6 @@ Page({
       that.data.banner.timeoutProcess = setInterval(that.timetochange,3000);
   },
   onLoad: function () {
-    console.log('onLoad index')
     var that = this;
     var bannerArr = util.getBanner(),
         navArr = util.getNav(),
@@ -52,13 +50,10 @@ Page({
         userInfo:userInfo
       })
     })
-    console.log(that.data);
   },
   onShow:function(){
-    console.log("onshow index");
     var that = this;
     that.data.banner.timeoutProcess = setInterval(that.timetochange,3000);
-    console.log(that.data);
   },
   onHide:function(){
     var that=this;
