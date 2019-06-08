@@ -10,6 +10,7 @@ import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -61,7 +62,9 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         user.setUserId(openid);
         user.setUserName(nickName);
+        System.out.println(nickName);
         user.setPicture(imgUrl);
+        user.setCreateTime(new Date());
         //返回session_key和openid
         map.put("status",userMapper.insertSelective(user));
         map.put("session_key", session_key);
