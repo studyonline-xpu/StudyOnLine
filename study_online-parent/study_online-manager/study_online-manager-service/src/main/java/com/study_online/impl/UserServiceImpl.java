@@ -62,7 +62,6 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         user.setUserId(openid);
         user.setUserName(nickName);
-        System.out.println(nickName);
         user.setPicture(imgUrl);
         user.setCreateTime(new Date());
         //返回session_key和openid
