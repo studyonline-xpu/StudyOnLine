@@ -24,4 +24,10 @@ public class VideoController {
     public List<Video> queryVideoByClassId(String classId){
         return videoService.queryVideoByClassId(classId);
     }
+
+    @RequestMapping("/queryHotVideo")
+    @ResponseBody
+    public List<Video> queryHotVideo(){
+        return videoService.queryHotVideo();
+    }
 }

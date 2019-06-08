@@ -20,10 +20,12 @@ public class VideoServiceImpl implements VideoService {
     VideoMapper videoMapper;
     @Override
     public List<Video> queryVideoByClassId(String classId) {
-        VideoExample example = new VideoExample();
-        VideoExample.Criteria criteria = example.createCriteria();
-        criteria.andClassIdEqualTo(classId);
-        List<Video> videos = videoMapper.selectByExampleWithBLOBs(example);
+        List<Video> videos = videoMapper.queryVideoByClassId(classId);
         return videos;
+    }
+
+    @Override
+    public List<Video> queryHotVideo() {
+       return videoMapper.queryHotVideo();
     }
 }

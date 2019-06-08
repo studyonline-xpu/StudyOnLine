@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -23,7 +24,14 @@ public class VideoClassController {
     public List<VideoClass> queryVideoClassByFatherId(String fatherId){
         if (fatherId==null)
             fatherId = "0";
-        return userService.queryVideoClassByFatherId(fatherId);
+        List<VideoClass> videoClasses = userService.queryVideoClassByFatherId(fatherId);
+        videoClasses.sort(new Comparator<VideoClass>() {
+            @Override
+            public int compare(VideoClass o1, VideoClass o2) {
+                return (o1.getClassId()).compareTo(o1.getClassId());
+            }
+        });
+        return videoClasses;
     }
 
 }

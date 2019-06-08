@@ -23,24 +23,14 @@ public class CatalogServiceImpl implements CatalogService {
     VideoMapper videoMapper;
     @Override
     public List<Catalog> queryChapter(String video_id) {
-        CatalogExample example = new CatalogExample();
-        CatalogExample.Criteria criteria = example.createCriteria();
-        criteria.andVideoIdEqualTo(video_id);
-        criteria.andFatherIdEqualTo("0");
-        List<Catalog> chapters = catalogMapper.selectByExampleWithBLOBs(example);
+
+        List<Catalog> chapters = catalogMapper.queryChapter(video_id);
+        for (Catalog chapter : chapters) {
+            chapter.setCatalogs(catalogMapper.queryCatalogsByFatherId(chapter.getCatalogId()));
+        }
         Video video = videoMapper.selectByPrimaryKey(video_id);
         video.setClicks(video.getClicks()+1);
         videoMapper.updateByPrimaryKeySelective(video);
         return chapters;
     }
-
-    @Override
-    public List<Catalog> queryVideoCatalog(String chapter_id) {
-        CatalogExample example = new CatalogExample();
-        CatalogExample.Criteria criteria = example.createCriteria();
-        criteria.andFatherIdEqualTo(chapter_id);
-        return catalogMapper.selectByExampleWithBLOBs(example);
-
-    }
-
 }

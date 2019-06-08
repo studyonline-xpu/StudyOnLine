@@ -2,6 +2,7 @@ package com.study_online.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class Catalog implements Serializable {
     private String catalogId;
@@ -22,6 +23,18 @@ public class Catalog implements Serializable {
 
     private String videoUrl;
 
+    //自己加的属性
+    private List<Catalog> catalogs;
+
+    public List<Catalog> getCatalogs() {
+        return catalogs;
+    }
+
+    public void setCatalogs(List<Catalog> catalogs) {
+        this.catalogs = catalogs;
+    }
+
+    //结束
     private static final long serialVersionUID = 1L;
 
     public String getCatalogId() {

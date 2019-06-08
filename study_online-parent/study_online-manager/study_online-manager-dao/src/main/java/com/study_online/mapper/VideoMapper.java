@@ -33,4 +33,16 @@ public interface VideoMapper {
     int updateByPrimaryKeyWithBLOBs(Video record);
 
     int updateByPrimaryKey(Video record);
+
+    //自己写的方法
+    /**
+     * 根据类别查找课程
+     * @param classId 类别id
+     * @return
+     */
+    List<Video> queryVideoByClassId(String classId);
+    /**
+     * 根据点击量反序查询出热点视频
+     */
+    List<Video> queryHotVideo();
 }
