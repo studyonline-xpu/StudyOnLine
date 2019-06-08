@@ -41,4 +41,8 @@ public interface VideoMapper {
      * @return
      */
     List<Video> queryVideoByClassId(String classId);
+    /**
+     * 根据点击量反序查询出热点视频
+     */
+    List<Video> queryHotVideo();
 }

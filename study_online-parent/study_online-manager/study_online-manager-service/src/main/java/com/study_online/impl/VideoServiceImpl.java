@@ -23,4 +23,9 @@ public class VideoServiceImpl implements VideoService {
         List<Video> videos = videoMapper.queryVideoByClassId(classId);
         return videos;
     }
+
+    @Override
+    public List<Video> queryHotVideo() {
+       return videoMapper.queryHotVideo();
+    }
 }

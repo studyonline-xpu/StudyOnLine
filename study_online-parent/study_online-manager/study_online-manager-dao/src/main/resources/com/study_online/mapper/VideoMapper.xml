@@ -227,6 +227,11 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
+  <!--查询热点视频-->
+  <select id="queryHotVideo" resultMap="BaseResultMap">
+      SELECT * from video ORDER BY(clicks) DESC LIMIT 8
+  </select>
+
   <update id="updateByExampleSelective" parameterType="map">
     update video
     <set>
