@@ -1,8 +1,10 @@
 package com.study_online.service;
 
+import com.study_online.pojo.User;
 import com.study_online.pojo.VideoClass;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author LM_Code
@@ -10,4 +12,5 @@ import java.util.List;
  */
 public interface UserService {
     List<VideoClass> queryVideoClassByFatherId(String fatherId);
+    Map<String,String> login(String appid,String secret,String js_code,String imgUrl,String nickName);
 }
