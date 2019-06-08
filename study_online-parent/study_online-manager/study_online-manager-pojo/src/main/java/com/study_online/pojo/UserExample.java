@@ -375,73 +375,73 @@ public class UserExample {
             return (Criteria) this;
         }
 
-        public Criteria andEmileIsNull() {
-            addCriterion("emile is null");
+        public Criteria andEmailIsNull() {
+            addCriterion("email is null");
             return (Criteria) this;
         }
 
-        public Criteria andEmileIsNotNull() {
-            addCriterion("emile is not null");
+        public Criteria andEmailIsNotNull() {
+            addCriterion("email is not null");
             return (Criteria) this;
         }
 
-        public Criteria andEmileEqualTo(String value) {
-            addCriterion("emile =", value, "emile");
+        public Criteria andEmailEqualTo(String value) {
+            addCriterion("email =", value, "email");
             return (Criteria) this;
         }
 
-        public Criteria andEmileNotEqualTo(String value) {
-            addCriterion("emile <>", value, "emile");
+        public Criteria andEmailNotEqualTo(String value) {
+            addCriterion("email <>", value, "email");
             return (Criteria) this;
         }
 
-        public Criteria andEmileGreaterThan(String value) {
-            addCriterion("emile >", value, "emile");
+        public Criteria andEmailGreaterThan(String value) {
+            addCriterion("email >", value, "email");
             return (Criteria) this;
         }
 
-        public Criteria andEmileGreaterThanOrEqualTo(String value) {
-            addCriterion("emile >=", value, "emile");
+        public Criteria andEmailGreaterThanOrEqualTo(String value) {
+            addCriterion("email >=", value, "email");
             return (Criteria) this;
         }
 
-        public Criteria andEmileLessThan(String value) {
-            addCriterion("emile <", value, "emile");
+        public Criteria andEmailLessThan(String value) {
+            addCriterion("email <", value, "email");
             return (Criteria) this;
         }
 
-        public Criteria andEmileLessThanOrEqualTo(String value) {
-            addCriterion("emile <=", value, "emile");
+        public Criteria andEmailLessThanOrEqualTo(String value) {
+            addCriterion("email <=", value, "email");
             return (Criteria) this;
         }
 
-        public Criteria andEmileLike(String value) {
-            addCriterion("emile like", value, "emile");
+        public Criteria andEmailLike(String value) {
+            addCriterion("email like", value, "email");
             return (Criteria) this;
         }
 
-        public Criteria andEmileNotLike(String value) {
-            addCriterion("emile not like", value, "emile");
+        public Criteria andEmailNotLike(String value) {
+            addCriterion("email not like", value, "email");
             return (Criteria) this;
         }
 
-        public Criteria andEmileIn(List<String> values) {
-            addCriterion("emile in", values, "emile");
+        public Criteria andEmailIn(List<String> values) {
+            addCriterion("email in", values, "email");
             return (Criteria) this;
         }
 
-        public Criteria andEmileNotIn(List<String> values) {
-            addCriterion("emile not in", values, "emile");
+        public Criteria andEmailNotIn(List<String> values) {
+            addCriterion("email not in", values, "email");
             return (Criteria) this;
         }
 
-        public Criteria andEmileBetween(String value1, String value2) {
-            addCriterion("emile between", value1, value2, "emile");
+        public Criteria andEmailBetween(String value1, String value2) {
+            addCriterion("email between", value1, value2, "email");
             return (Criteria) this;
         }
 
-        public Criteria andEmileNotBetween(String value1, String value2) {
-            addCriterion("emile not between", value1, value2, "emile");
+        public Criteria andEmailNotBetween(String value1, String value2) {
+            addCriterion("email not between", value1, value2, "email");
             return (Criteria) this;
         }
 
