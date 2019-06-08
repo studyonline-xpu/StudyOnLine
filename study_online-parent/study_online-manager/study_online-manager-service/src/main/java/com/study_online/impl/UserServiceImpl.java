@@ -5,6 +5,7 @@ import com.study_online.mapper.VideoClassMapper;
 import com.study_online.pojo.User;
 import com.study_online.pojo.VideoClass;
 import com.study_online.service.UserService;
+import com.study_online.userUtil.HttpRequest;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,9 +34,8 @@ public class UserServiceImpl implements UserService {
      * @create 2019-06-08
      */
     @Override
-    public Map<String, String> login(String appid,String secret,String js_code,String imgUrl,String nickName) {
-        Map<String, String> map = new HashMap<>();
-        Map map = new HashMap();
+    public Map login(String appid,String secret,String js_code,String imgUrl,String nickName) {
+        Map map = new HashMap<>();
         //登录凭证不能为空
         if (js_code == null || js_code.length() == 0) {
             map.put("status", 0);
@@ -57,11 +57,15 @@ public class UserServiceImpl implements UserService {
         String session_key = json.get("session_key").toString();
         //用户的唯一标识（openid）
         String openid = (String) json.get("openid");
-        System.out.println(openid);
-        System.out.println(session_key);
-        System.out.println(imgUrl);
-        System.out.println(nickName);
-        map.put("status",String.valueOf(userMapper.insertSelective(user)));
+        //新创建一个用户
+        User user = new User();
+        user.setUserId(openid);
+        user.setUserName(nickName);
+        user.setPicture(imgUrl);
+        //返回session_key和openid
+        map.put("status",userMapper.insertSelective(user));
+        map.put("session_key", session_key);
+        map.put("openid", openid);
         return map;
     }
 }
