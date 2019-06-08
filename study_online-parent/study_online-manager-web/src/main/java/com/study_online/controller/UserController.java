@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,5 +24,10 @@ public class UserController {
     @ResponseBody
     public Map<String,String> Login(String appid,String secret,String js_code,String imgUrl,String nickName) {
         return userService.login(appid,secret,js_code,imgUrl,nickName);
+    }
+    @RequestMapping("/queryCollections")
+    @ResponseBody
+    public String[] queryCollections(String user_id){
+        return userService.queryCollections(user_id);
     }
 }

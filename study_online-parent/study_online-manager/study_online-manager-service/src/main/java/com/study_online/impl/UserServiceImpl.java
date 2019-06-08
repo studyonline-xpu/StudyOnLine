@@ -3,6 +3,7 @@ package com.study_online.impl;
 import com.study_online.mapper.UserMapper;
 import com.study_online.mapper.VideoClassMapper;
 import com.study_online.pojo.User;
+import com.study_online.pojo.UserExample;
 import com.study_online.pojo.VideoClass;
 import com.study_online.service.UserService;
 import com.study_online.userUtil.HttpRequest;
@@ -69,5 +70,22 @@ public class UserServiceImpl implements UserService {
         map.put("session_key", session_key);
         map.put("openid", openid);
         return map;
+    }
+
+    /**
+     * 查询用户的收藏课程
+     * @param user_id
+     * @return
+     */
+    @Override
+    public String[] queryCollections(String user_id) {
+        UserExample example = new UserExample();
+        UserExample.Criteria criteria = example.createCriteria();
+        criteria.andUserIdEqualTo(user_id);
+        List<User> users = userMapper.selectByExampleWithBLOBs(example);
+        String collection = users.get(0).getCollect();
+        String[] split = collection.split(",");
+
+        return split;
     }
 }
