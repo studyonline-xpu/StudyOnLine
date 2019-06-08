@@ -22,7 +22,6 @@ public class UserController {
     @RequestMapping("/login")
     @ResponseBody
     public Map<String,String> Login(String appid,String secret,String js_code,String imgUrl,String nickName) {
-
-        return map;
+        return userService.login(appid,secret,js_code,imgUrl,nickName);
     }
 }
