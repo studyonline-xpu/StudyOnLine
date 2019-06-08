@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/getUserInfo/index",
     "pages/index/index",
     "pages/course/course",
     "pages/mystudy/mystudy",

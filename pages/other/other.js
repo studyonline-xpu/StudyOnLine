@@ -1,8 +1,13 @@
 // pages/other/other.js
 Page({
   data:{
-    currentData: 0,
     currentIcon:"down.png",
+    videoUrl:'',
+    current: '1',
+    current_scroll: '1',
+    tab1:true,
+    tab2:false,
+    tab3:false,
     name: 'name0',
     good:[
       { name: "likes", value: 123 }, { name: "collection", value: 123 }, { name: "direct", value: 123}
@@ -17,6 +22,37 @@ Page({
       { img: '', nickname: '刘琪军', time: '2019-09-10', content: '教学很详细，很容易就懂了' },
     ]
   },
+  handleChange({ detail }) {
+    var index = detail.key;
+    this.setData({
+      current: detail.key
+    });
+    if (index == 1) {
+      this.setData({
+        tab1: true,
+        tab2: false,
+        tab3: false
+      })
+    } else if (index == 2) {
+      this.setData({
+        tab1: false,
+        tab2: true,
+        tab3: false
+      })
+    } else if (index == 3) {
+      this.setData({
+        tab1: false,
+        tab2: false,
+        tab3: true
+      })
+    }
+  },
+
+  handleChangeScroll({ detail }) {
+    this.setData({
+      current_scroll: detail.key
+    });
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
     var _this = this;
@@ -27,6 +63,7 @@ Page({
       },
       success: function (res) {
         var cataloge = res.data;
+        console.log(cataloge)
         for (var i = 0; i < cataloge.length;i++){
           cataloge[i].name = "name"+i;
         }
@@ -35,24 +72,6 @@ Page({
         })
       }
     })
-  },
-  //获取当前滑块的index
-  bindchange: function (e) {
-    const that = this;
-    that.setData({
-      currentData: e.detail.current
-    })
-  },
-  //点击切换，滑块index赋值
-  checkCurrent: function (e) {
-    const that = this;
-    if (that.data.currentData === e.target.dataset.current) {
-      return false;
-    } else {
-      that.setData({
-        currentData: e.target.dataset.current
-      })
-    }
   },
   //切换图表朝向
   change: function (e) {
@@ -68,6 +87,12 @@ Page({
     }
     _this.setData({
       currentIcon: thisIcon
+    })
+  },
+  changeSource: function (e) {
+    var _this = this;
+    _this.setData({
+      videoUrl: e.currentTarget.dataset.url
     })
   }
 })

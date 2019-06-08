@@ -7,13 +7,6 @@
   width: 100%;
   height: 100%;
 }
-/* 选项卡 */
-.tab{float: left; width: 50%;text-align: center;padding: 10rpx 0; }
-.topTabSwiper{border-bottom: 1px solid #ccc; zoom: 1;}
-.topTabSwiper:after{content: ""; clear: both;display: block;}
-.tabBorer{border-bottom: 1px solid #f00; color: #f00;}
-.swiper{width: 100%;}
-
 .good{
   width: 100%;
   height: 170rpx;
@@ -53,4 +46,8 @@
 .catelogue{
   width: 90%;
   margin: 0 auto;
+}
+.first{
+  margin: 15rpx;
+  font-size: 32rpx;
 }

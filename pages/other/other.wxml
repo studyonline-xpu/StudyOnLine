@@ -1,84 +1,73 @@
 <!--pages/other/other.wxml-->
 <view class='video'>
-  <video src='http://101.132.78.78:80/group1/M00/00/00/rBOl6VzyTNCAHiB9AKAbe6jPrCo926.mp4' binderror="videoErrorCallback" enable-progress-gesture='true'></video>
+  <video src='{{videoUrl}}' binderror="videoErrorCallback" enable-progress-gesture='true'></video>
 </view>
 <!-- 课堂情况展示 -->
-<view class='topTabSwiper'>
-    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>详情</view>
-    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>评论</view>
-</view>
-<swiper current="{{currentData}}" class='swiper' style="height:1340rpx;" duration="300" bindchange="bindchange">
-  <swiper-item>
-      <view class='authorInfo'>
-        <i-card title="王老师" extra="2019-10-22" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-          <view slot="content">这个人很懒，什么都没留下</view>
-        </i-card>
+<i-tabs current="{{ current }}" color="#f759ab" bindchange="handleChange">
+    <i-tab key="1" title="详情"></i-tab>
+    <i-tab key="2" title="目录"></i-tab>
+    <i-tab key="3" title="评论"></i-tab>
+</i-tabs>
+<view wx:if='{{tab1}}' class='tb1'>
+  <view class='authorInfo'>
+    <i-card title="王老师" extra="2019-10-22" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+      <view slot="content">这个人很懒，什么都没留下</view>
+    </i-card>
+  </view>
+    <view class='videoInfo'>
+      <!-- 标题 -->
+      <view style='width: 90%;margin: 0 auto;margin-top: 10rpx;' bindtap='change'>
+        <text class='title'>尚硅谷_韩顺平Linux教程</text>
+        <image src='../../images/{{currentIcon}}' class='icon'></image>
       </view>
-      <view class='videoInfo'>
-        <!-- 标题 -->
-        <view style='width: 90%;margin: 0 auto;margin-top: 10rpx;' bindtap='change'>
-          <text class='title'>尚硅谷_韩顺平Linux教程</text>
-          <image src='../../images/{{currentIcon}}' class='icon'></image>
-        </view>
-        <view style='width: 90%;margin: 0 auto;display:flex'>
-          <!-- 播放量 -->
-          <view style='width:20%;height:100%;'>
-            <image src='../../images/clicks.png' class='smallIcon'></image>
-            <text class='clicks'>123</text> 
-          </view> 
-          <!-- 上传日期 -->
-          <view style='width:30%;height:100%;'>
-            <image src='../../images/date.png' class='smallIcon'></image>
-            <text class='clicks'>2019-10-2</text> 
-          </view> 
-        </view>
+      <view style='width: 90%;margin: 0 auto;display:flex'>
+        <!-- 播放量 -->
+        <view style='width:20%;height:100%;'>
+          <image src='../../images/clicks.png' class='smallIcon'></image>
+          <text class='clicks'>123</text> 
+        </view> 
+        <!-- 上传日期 -->
+        <view style='width:30%;height:100%;'>
+          <image src='../../images/date.png' class='smallIcon'></image>
+          <text class='clicks'>2019-10-2</text> 
+        </view> 
       </view>
-      <!-- 简介 -->
-      <view class='detailDesc'>
+    </view>
+    <!-- 简介 -->
+    <view class='detailDesc'>
         
-      </view>
-      <!-- 视频评价 -->
-      <view class='good'>
-        <i-grid>
-          <block wx:for='{{good}}' wx:for-item='item' wx:key='item'>
-            <i-grid-item>
-                <i-grid-icon>
-                    <image src="../../images/{{item.name}}.png" />
-                </i-grid-icon>
-                <i-grid-label>{{item.value}}</i-grid-label>
-            </i-grid-item>
-          </block>
-        </i-grid>
-      </view>
-      <!-- 视频目录 -->
-      <view class='catelogue'>
-        <view class="caption-wrap">
-          <text class="caption-title">目录</text>
-          <i-collapse name="{{name}}" accordion>
-            <block wx:for='{{cataloge}}' wx:key='key'>
-              <i-collapse-item
-                      name="{{item.name}}"
-                      title="{{item.catalogId}}.{{item.catalogName}}"
-                      i-class-title="collapse-item-title"
-                      i-class-content="collapse-item-content">
-                <block wx:for='{{item.catalogs}}' wx:key='key' wx:for-item='secondItem'>
-                  <view slot="content" class='firstTitle'>
-                      {{secondItem.catalogId}}{{secondItem.catalogName}}
-                  </view>
-                </block>
-              </i-collapse-item>
-            </block>
-          </i-collapse>
-        </view>
-      </view>
-  </swiper-item>
+    </view>
+    <!-- 视频评价 -->
+    <view class='good'>
+      <i-grid>
+        <block wx:for='{{good}}' wx:for-item='item' wx:key='item'>
+          <i-grid-item>
+              <i-grid-icon>
+                  <image src="../../images/{{item.name}}.png" />
+              </i-grid-icon>
+              <i-grid-label>{{item.value}}</i-grid-label>
+          </i-grid-item>
+        </block>
+      </i-grid>
+    </view>
+  </view>
   <!-- 第二个滑块的内容 -->
-  <swiper-item>
+  <view wx:if='{{tab2}}' style='background-color: #f0f1f5;'>
+    <block wx:for='{{cataloge}}' wx:key='kkey'>
+    <text class='first'>第{{index+1}}章  {{item.catalogName}}</text>
+    <i-cell-group>
+    <block wx:for='{{item.catalogs}}' wx:key='secondItem' wx:for-item='secondItem'>
+      <i-cell title="{{secondItem.catalogName}}" is-link url="/pages/dashboard/index"></i-cell>
+    </block>
+    </i-cell-group>
+    </block>
+  </view>
+  <!-- 第三个滑块的内容 -->
+  <view wx:if='{{tab3}}' class='tab3'>
     <block wx:for='{{conment}}' wx:key='kkei'>
       <i-card title="{{item.nickname}}" extra="{{item.time}}" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
         <view slot="content">{{item.content}}</view>
         <view slot="footer">查看回复 ></view>
       </i-card>
     </block>
-  </swiper-item>  
-</swiper>
+  </view>  

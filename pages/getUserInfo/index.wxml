@@ -1,0 +1,18 @@
+<view wx:if="{{canIUse}}">
+    <view class='header'>
+        <!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+      <open-data type="userAvatarUrl" class="userInfo"></open-data>
+      <open-data type="userNickName" class='store_address'></open-data>
+    </view>
+
+    <view class='content'>
+        <view>大表嫂课堂申请获取以下权限</view>
+        <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+        授权登录
+    </button>
+</view>
+
+<view wx:else>请升级微信版本</view>
