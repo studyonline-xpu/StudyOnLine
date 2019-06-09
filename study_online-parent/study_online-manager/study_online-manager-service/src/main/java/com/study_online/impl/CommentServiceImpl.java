@@ -1,8 +1,10 @@
 package com.study_online.impl;
 
 import com.study_online.mapper.CommentsMapper;
+import com.study_online.mapper.UserMapper;
 import com.study_online.pojo.Comments;
 import com.study_online.pojo.CommentsExample;
+import com.study_online.pojo.User;
 import com.study_online.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +19,8 @@ import java.util.List;
 public class CommentServiceImpl implements CommentService {
     @Autowired
     CommentsMapper commentsMapper;
+    @Autowired
+    UserMapper userMapper;
 
     /**
      * 根据father_id查询评论是实现类方法
@@ -29,6 +33,11 @@ public class CommentServiceImpl implements CommentService {
         CommentsExample.Criteria criteria = example.createCriteria();
         criteria.andFatherIdEqualTo(father_id);
         List<Comments> comments = commentsMapper.selectByExampleWithBLOBs(example);
+        for (Comments comment : comments) {
+            User user = userMapper.selectByPrimaryKey(comment.getFromId());
+            comment.setFromName(user.getUserName());
+            comment.setFromPicture(user.getPicture());
+        }
         return comments;
     }
 }
