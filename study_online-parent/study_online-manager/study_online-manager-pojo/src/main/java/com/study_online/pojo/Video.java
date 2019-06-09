@@ -30,6 +30,28 @@ public class Video implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    //自己加的属性
+    private String userName;
+
+    private String userPicture;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+    //end
+
+    public String getUserPicture() {
+        return userPicture;
+    }
+
+    public void setUserPicture(String userPicture) {
+        this.userPicture = userPicture;
+    }
+
     public String getVideoId() {
         return videoId;
     }
