@@ -1,5 +1,6 @@
 package com.study_online.controller;
 
+import com.study_online.pojo.Video;
 import com.study_online.service.UserService;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ public class UserController {
     }
     @RequestMapping("/queryCollections")
     @ResponseBody
-    public String[] queryCollections(String user_id){
+    public List<Video> queryCollections(String user_id){
         return userService.queryCollections(user_id);
     }
 }

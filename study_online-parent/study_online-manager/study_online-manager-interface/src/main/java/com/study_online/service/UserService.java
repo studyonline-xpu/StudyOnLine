@@ -1,6 +1,7 @@
 package com.study_online.service;
 
 import com.study_online.pojo.User;
+import com.study_online.pojo.Video;
 import com.study_online.pojo.VideoClass;
 
 import java.util.List;
@@ -30,5 +31,5 @@ public interface UserService {
      * @param user_id
      * @return
      */
-    public String[] queryCollections(String user_id);
+    public List<Video> queryCollections(String user_id);
 }

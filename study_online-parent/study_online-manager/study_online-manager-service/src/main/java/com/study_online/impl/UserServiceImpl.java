@@ -2,19 +2,16 @@ package com.study_online.impl;
 
 import com.study_online.mapper.UserMapper;
 import com.study_online.mapper.VideoClassMapper;
-import com.study_online.pojo.User;
-import com.study_online.pojo.UserExample;
-import com.study_online.pojo.VideoClass;
+import com.study_online.mapper.VideoMapper;
+import com.study_online.pojo.*;
 import com.study_online.service.UserService;
 import com.study_online.userUtil.HttpRequest;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author LM_Code
@@ -26,6 +23,8 @@ public class UserServiceImpl implements UserService {
     VideoClassMapper classMapper;
     @Autowired
     UserMapper userMapper;
+    @Autowired
+    VideoMapper videoMapper;
     @Override
     public List<VideoClass> queryVideoClassByFatherId(String fatherId) {
         return classMapper.queryVideoClassByFatherId(fatherId);
@@ -78,14 +77,22 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public String[] queryCollections(String user_id) {
+    public List<Video> queryCollections(String user_id) {
+        //查出所有的收藏视屏的video_id
         UserExample example = new UserExample();
         UserExample.Criteria criteria = example.createCriteria();
         criteria.andUserIdEqualTo(user_id);
         List<User> users = userMapper.selectByExampleWithBLOBs(example);
         String collection = users.get(0).getCollect();
         String[] split = collection.split(",");
+        List<String> strings = Arrays.asList(split);
 
-        return split;
+        //查出所有的收藏视屏
+        VideoExample example1 = new VideoExample();
+        VideoExample.Criteria criteria1 = example1.createCriteria();
+        criteria1.andVideoIdIn(strings);
+        List<Video> videos = videoMapper.selectByExampleWithBLOBs(example1);
+
+        return videos;
     }
 }
