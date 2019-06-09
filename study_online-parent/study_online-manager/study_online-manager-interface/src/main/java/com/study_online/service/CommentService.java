@@ -14,4 +14,10 @@ public interface CommentService {
      * 根据father_id查询评论
      */
     public List<Comments> queryComments(String father_id);
+
+    /**
+     * 插入评论
+     * @param comments
+     */
+    public void insertComments(Comments comments);
 }
