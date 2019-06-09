@@ -32,6 +32,11 @@ public class VideoServiceImpl implements VideoService {
     @Override
     public List<Video> queryVideoByClassId(String classId) {
         List<Video> videos = videoMapper.queryVideoByClassId(classId);
+        for (Video video : videos) {
+            User user = userMapper.selectByPrimaryKey(video.getUserId());
+            video.setUserName(user.getUserName());
+            video.setUserPicture(user.getPicture());
+        }
         return videos;
     }
 
@@ -41,7 +46,13 @@ public class VideoServiceImpl implements VideoService {
      */
     @Override
     public List<Video> queryHotVideo() {
-       return videoMapper.queryHotVideo();
+        List<Video> videos = videoMapper.queryHotVideo();
+        for (Video video : videos) {
+            User user = userMapper.selectByPrimaryKey(video.getUserId());
+            video.setUserName(user.getUserName());
+            video.setUserPicture(user.getPicture());
+        }
+        return videos;
     }
 
     /**
