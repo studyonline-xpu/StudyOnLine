@@ -28,4 +28,9 @@ public class CommentController {
     public List<Comments> queryComments(String father_id){
         return commentService.queryComments(father_id);
     }
+    @RequestMapping("/insertComments")
+    @ResponseBody
+    public void insertComments(Comments comments){
+       commentService.insertComments(comments);
+    }
 }

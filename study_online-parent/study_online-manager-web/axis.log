@@ -4261,3 +4261,25 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 2019-06-09 10:30:11,356 14093  [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'study_online-manager-web-servlet': startup date [Sun Jun 09 10:29:57 CST 2019]; root of context hierarchy
 2019-06-09 10:30:11,435 14172  [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'study_online-manager-web-servlet': startup date [Sun Jun 09 10:29:57 CST 2019]; root of context hierarchy
 2019-06-09 10:30:11,497 14234  [ost-startStop-1] INFO  .web.servlet.DispatcherServlet  - FrameworkServlet 'study_online-manager-web': initialization completed in 14234 ms
+2019-06-09 11:20:24,009 3026746 [:20880-thread-4] INFO  c.protocol.dubbo.DubboProtocol  -  [DUBBO] disconected from /192.168.1.1:20880,url:dubbo://192.168.1.1:20880/com.study_online.service.CatalogService?anyhost=true&application=study_online-manager-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.study_online.service.CatalogService&methods=queryChapter&pid=1640&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1560047397779, dubbo version: 2.5.3, current host: 192.168.1.1
+2019-06-09 11:20:25,965 3028702 [tTimer-thread-2] WARN  oting.transport.AbstractClient  -  [DUBBO] client reconnect to 192.168.1.1:20880 find error . url: dubbo://192.168.1.1:20880/com.study_online.service.CatalogService?anyhost=true&application=study_online-manager-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.study_online.service.CatalogService&methods=queryChapter&pid=1640&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1560047397779, dubbo version: 2.5.3, current host: 192.168.1.1
+com.alibaba.dubbo.remoting.RemotingException: client(url: dubbo://192.168.1.1:20880/com.study_online.service.CatalogService?anyhost=true&application=study_online-manager-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.study_online.service.CatalogService&methods=queryChapter&pid=1640&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1560047397779) failed to connect to server /192.168.1.1:20880, error message is:Connection refused: no further information: /192.168.1.1:20880
+	at com.alibaba.dubbo.remoting.transport.netty.NettyClient.doConnect(NettyClient.java:124)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:280)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient$1.run(AbstractClient.java:145)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: no further information: /192.168.1.1:20880
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:150)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	... 3 more
