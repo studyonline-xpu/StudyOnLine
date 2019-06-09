@@ -41,7 +41,6 @@ Page({
         fatherId: fatherId
       },
       success: function(res) {
-        console.log(res.data)
         _this.setData({
           detailCourse: res.data
         })

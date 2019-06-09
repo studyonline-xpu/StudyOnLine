@@ -10,9 +10,8 @@ Page({
       currindex:0,
       bannerimg:[]
     },
-    nav:[],
     ad:[],
-    course_grp:[],
+    hotCourse:[],
     moreCourses:{
       title:"已经到底，查看更多课程 >",
       url:"../course/course"
@@ -30,17 +29,13 @@ Page({
   onLoad: function () {
     var that = this;
     var bannerArr = util.getBanner(),
-        navArr = util.getNav(),
-        adArr = util.getAd(),
-        courseGrp = util.getCourse();
+        adArr = util.getAd();
     that.setData({
         banner:{
           currindex:0,
           bannerimg:bannerArr
         },
-        nav:navArr,
         ad:adArr,
-        course_grp:courseGrp
       });
     that.changeBanner(0);
     //调用应用实例的方法获取全局数据
@@ -49,6 +44,19 @@ Page({
       that.setData({
         userInfo:userInfo
       })
+    })
+    wx.request({
+      url: 'http://47.103.101.35:8080/study_online-manager-web/video/queryHotVideo',
+      success:function(res){
+        var hotCourse = res.data;
+        for(var i = 0;i<hotCourse.length;i++){
+          var courseInfo = JSON.stringify(hotCourse[i]);
+          hotCourse[i].navigate = '../other/other?courseInfo=' + courseInfo
+        }
+        that.setData({
+          hotCourse: hotCourse
+        })
+      }
     })
   },
   onShow:function(){

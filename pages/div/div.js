@@ -21,11 +21,10 @@ Page({
         classId: options.classId
       },
       success: function (res) {
-        console.log(res)
         var hotlist = res.data;
         for(var i = 0;i<hotlist.length;i++){
-          hotlist[i].navigate = '../other/other?video_id='+hotlist[i].videoId;
-          console.log(hotlist[i].navigate)
+          var courseInfo = JSON.stringify(hotlist[i]);
+          hotlist[i].navigate = '../other/other?courseInfo=' + courseInfo;
         }
         _this.setData({
           hotList: res.data

@@ -10,43 +10,45 @@
 </i-tabs>
 <view wx:if='{{tab1}}' class='tb1'>
   <view class='authorInfo'>
-    <i-card title="王老师" extra="2019-10-22" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <i-card title="{{courseInfo.userName}}" extra="2019-10-22" thumb="{{courseInfo.userPicture}}">
       <view slot="content">这个人很懒，什么都没留下</view>
     </i-card>
   </view>
     <view class='videoInfo'>
       <!-- 标题 -->
       <view style='width: 90%;margin: 0 auto;margin-top: 10rpx;' bindtap='change'>
-        <text class='title'>尚硅谷_韩顺平Linux教程</text>
+        <text class='title'>{{courseInfo.videoName}}</text>
         <image src='../../images/{{currentIcon}}' class='icon'></image>
       </view>
       <view style='width: 90%;margin: 0 auto;display:flex'>
         <!-- 播放量 -->
         <view style='width:20%;height:100%;'>
           <image src='../../images/clicks.png' class='smallIcon'></image>
-          <text class='clicks'>123</text> 
+          <text class='clicks'>{{courseInfo.clicks}}</text> 
         </view> 
         <!-- 上传日期 -->
         <view style='width:30%;height:100%;'>
           <image src='../../images/date.png' class='smallIcon'></image>
-          <text class='clicks'>2019-10-2</text> 
+          <text class='clicks'>{{courseInfo.updateTime}}</text> 
         </view> 
       </view>
     </view>
     <!-- 简介 -->
     <view class='detailDesc'>
-        
+        <text>{{courseInfo.note}}</text>
     </view>
     <!-- 视频评价 -->
     <view class='good'>
       <i-grid>
         <block wx:for='{{good}}' wx:for-item='item' wx:key='item'>
-          <i-grid-item>
-              <i-grid-icon>
-                  <image src="../../images/{{item.name}}.png" />
-              </i-grid-icon>
-              <i-grid-label>{{item.value}}</i-grid-label>
-          </i-grid-item>
+          <view bindtap='changeData' data-index='{{index}}'>
+            <i-grid-item>
+                <i-grid-icon>
+                    <image src="../../images/{{item.name}}.png" />
+                </i-grid-icon>
+                <i-grid-label>{{item.value}}</i-grid-label>
+            </i-grid-item>
+          </view>
         </block>
       </i-grid>
     </view>
@@ -56,8 +58,9 @@
     <block wx:for='{{cataloge}}' wx:key='kkey'>
     <text class='first'>第{{index+1}}章  {{item.catalogName}}</text>
     <i-cell-group>
-    <block wx:for='{{item.catalogs}}' wx:key='secondItem' wx:for-item='secondItem'>
-      <i-cell title="{{secondItem.catalogName}}" is-link url="/pages/dashboard/index"></i-cell>
+    <block wx:for='{{item.catalogs}}' wx:key='secondItem' wx:for-item='secondItem' wx:for-index='secondIndex'>
+      <view bindtap='changeSource' data-index='{{index}}' data-secondIndex='{{secondIndex}}'>
+      <i-cell title="{{secondItem.catalogName}}"></i-cell></view>
     </block>
     </i-cell-group>
     </block>
@@ -65,9 +68,14 @@
   <!-- 第三个滑块的内容 -->
   <view wx:if='{{tab3}}' class='tab3'>
     <block wx:for='{{conment}}' wx:key='kkei'>
-      <i-card title="{{item.nickname}}" extra="{{item.time}}" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-        <view slot="content">{{item.content}}</view>
-        <view slot="footer">查看回复 ></view>
+      <i-card title="{{item.fromName}}" extra="{{item.time}}" thumb="{{item.fromPicture}}">
+        <view slot="content">{{item.msg}}</view>
+        <view slot="footer" bindtap='detailReply' data-fatherId='{{item.commentsId}}'>查看回复 ></view>
       </i-card>
     </block>
+    <!-- 写评论区 -->
+    <view class='writeConment'>
+      <input type='text' placeholder='说点什么吧'></input>
+    </view>
+    <!-- 二级评论区 -->
   </view>  
