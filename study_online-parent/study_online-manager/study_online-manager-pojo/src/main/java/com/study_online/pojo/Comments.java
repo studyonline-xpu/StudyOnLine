@@ -18,6 +18,27 @@ public class Comments implements Serializable {
 
     private String msg;
 
+    //添加属性
+    private String fromName;
+    private String fromPicture;
+
+    public String getFromName() {
+        return fromName;
+    }
+
+    public void setFromName(String fromName) {
+        this.fromName = fromName;
+    }
+
+    public String getFromPicture() {
+        return fromPicture;
+    }
+    //结束
+
+    public void setFromPicture(String fromPicture) {
+        this.fromPicture = fromPicture;
+    }
+
     private static final long serialVersionUID = 1L;
 
     public String getCommentsId() {
