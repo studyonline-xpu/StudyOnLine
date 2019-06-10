@@ -50,7 +50,7 @@
           <navigator url="{{item.navigate}}" class="flex flex-col">
             <image src="{{item.picture}}"></image>
             <text>{{item.videoName}}</text>
-            <text>{{item.price}}</text>
+            <text>￥ {{item.price}}</text>
           </navigator>
         </block>
       </view> 

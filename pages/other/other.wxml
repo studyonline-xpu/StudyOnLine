@@ -70,12 +70,36 @@
     <block wx:for='{{conment}}' wx:key='kkei'>
       <i-card title="{{item.fromName}}" extra="{{item.time}}" thumb="{{item.fromPicture}}">
         <view slot="content">{{item.msg}}</view>
-        <view slot="footer" bindtap='detailReply' data-fatherId='{{item.commentsId}}'>查看回复 ></view>
+        <view slot="footer" bindtap="powerDrawer" data-fatherId='{{item.commentsId}}' data-statu="open">查看回复 ></view>
       </i-card>
     </block>
     <!-- 写评论区 -->
     <view class='writeConment'>
-      <input type='text' placeholder='说点什么吧'></input>
+        <input type='text' placeholder='说点什么吧' bindinput='getConment' value='{{conmentContent}}'></input>
+        <button bindtap='release' class='btn'>发布</button>  
     </view>
     <!-- 二级评论区 -->
+    <view class='secondConment' wx:if='{{showModalStatus}}' animation='{{animationData}}'>
+      <view class='head'>
+        <view class='headone'><text class='conmentTitle'>评论回复详情</text></view>
+        <view class='headtwo'>
+          <button class='closeBtn' bindtap='powerDrawer' data-statu="close">
+            <image src='../../images/x.png' class='closed'></image>
+          </button>
+        </view>
+      </view>
+      <view class='secondCommentBody'>
+      <block wx:for='{{secondConment}}' wx:key='kkei'>
+        <i-card title="{{item.fromName}}" extra="{{item.time}}" thumb="{{item.fromPicture}}">
+          <view slot="content">{{item.msg}}</view>
+          <view slot="footer">查看回复 ></view>
+        </i-card>
+      </block>
+      </view>
+      <!-- 写评论区 -->
+      <view class='writeConment'>
+        <input type='text' placeholder='说点什么吧' bindinput='getConment' value='{{conmentContent}}'></input>
+        <button bindtap='release' class='btn'>发布</button>  
+      </view>
+    </view>
   </view>  

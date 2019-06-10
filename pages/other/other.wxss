@@ -62,14 +62,20 @@
   justify-content: center; 
 }
 .writeConment input{
-  width: 90%;
+  width: 80%;
   height: 70%;
   border-radius: 100rpx;
   border: 1rpx solid #c1c2c5;
-  background-color: #9a9b9cfa;
+  background-color: #cbccce;
   margin: 0 auto;
   font-size: 0.8rem;
   padding-left: 25rpx;
+}
+.btn{
+  font-size: 0.8rem;
+  background-color: rgb(230, 230, 230);
+  outline: none;
+  border: none;
 }
 .detailDesc{
   width: 90%;
@@ -78,25 +84,36 @@
   color: #a7a8a8fa;
 }
 /* 二级评论区 */
-.drawer_attr_box {
+.secondConment{
   width: 100%;
-  overflow: hidden;
+  height: 811rpx;
   position: fixed;
   bottom: 0;
-  left: 0;
-  z-index: 1001;
-  background: #fff;
-}
-.drawer_content {
-  padding: 20rpx 40rpx;
-  height: 470rpx;
+  background-color: white;
   overflow-y: scroll;
 }
-.drawer_title{
-  padding:20rpx;
-  font:42rpx "microsoft yahei";
-  text-align: center;
+.head{
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
 }
-.line{
-  border-bottom: 1px solid #f8f8f8;
+.headone,.headtwo{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  font-size: 0.8rem;
 }
+.conmentTitle{
+  position: fixed;
+  margin-left: 30rpx;
+  top: 18rpx;
+}
+.closed{
+  width: 43rpx;
+  height: 43rpx;
+}
+.closeBtn{
+  margin-right: 0;
+  background-color: #fff;
+}
+.closeBtn::after{ border: none; }
