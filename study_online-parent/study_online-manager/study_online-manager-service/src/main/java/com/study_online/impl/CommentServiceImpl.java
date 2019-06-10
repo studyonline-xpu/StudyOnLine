@@ -49,9 +49,10 @@ public class CommentServiceImpl implements CommentService {
      */
     @Override
     public void insertComments(Comments comments) {
+        //补充id属性
         comments.setCommentsId(IDUtils.genItemId());
         //将被评论的评论改为父级评论
-        if(comments.getFatherId() != null && !comments.getFatherId().trim().equals("") ){
+        if(!("".equals(comments.getToId()) || comments.getToId()==null)){
             Comments comments1 = commentsMapper.selectByPrimaryKey(comments.getFatherId());
             if(!comments1.getIsFather()){
                 comments1.setIsFather(true);

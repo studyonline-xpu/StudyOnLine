@@ -29,6 +29,11 @@ public class CommentController {
     public List<Comments> queryComments(String father_id){
         return commentService.queryComments(father_id);
     }
+
+    /**
+     * 插入评论
+     * @param commentsJson
+     */
     @RequestMapping("/insertComments")
     @ResponseBody
     public void insertComments(String commentsJson){
