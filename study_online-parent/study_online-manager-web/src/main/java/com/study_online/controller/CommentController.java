@@ -2,6 +2,7 @@ package com.study_online.controller;
 
 import com.study_online.pojo.Comments;
 import com.study_online.service.CommentService;
+import com.study_online.userUtil.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,7 +31,8 @@ public class CommentController {
     }
     @RequestMapping("/insertComments")
     @ResponseBody
-    public void insertComments(Comments comments){
-       commentService.insertComments(comments);
+    public void insertComments(String commentsJson){
+        Comments comments = JsonUtils.jsonToPojo(commentsJson, Comments.class);
+        commentService.insertComments(comments);
     }
 }
