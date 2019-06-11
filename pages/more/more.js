@@ -21,5 +21,10 @@ Page({
         userInfo:userInfo
       })
     })
+  },
+  cd: function(e) {
+    wx.navigateTo({
+      url: '../collection/index',
+    })
   }
 })

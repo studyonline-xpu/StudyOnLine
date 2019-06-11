@@ -7,13 +7,14 @@
     "pages/more/more",
     "pages/other/other",
     "pages/logs/logs",
-    "pages/div/div"
+    "pages/div/div",
+    "pages/collection/index"
   ],
   "window":{
     "backgroundColor":"#31a030",
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "网易云课堂",
+    "navigationBarTitleText": "大表嫂课堂",
     "navigationBarTextStyle":"black"
   },
   "tabBar":{

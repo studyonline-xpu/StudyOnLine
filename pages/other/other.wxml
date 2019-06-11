@@ -2,7 +2,7 @@
 <view class='video'>
   <video src='{{videoUrl}}' binderror="videoErrorCallback" enable-progress-gesture='true'></video>
 </view>
-<!-- 课堂情况展示 -->
+<!-- 选项卡切换 -->
 <i-tabs current="{{ current }}" color="#f759ab" bindchange="handleChange">
     <i-tab key="1" title="详情"></i-tab>
     <i-tab key="2" title="目录"></i-tab>
@@ -34,8 +34,8 @@
       </view>
     </view>
     <!-- 简介 -->
-    <view class='detailDesc'>
-        <text>{{courseInfo.note}}</text>
+    <view animation='{{animation2}}' class='detailDesc'>
+      <text>{{courseInfo.note}}</text>
     </view>
     <!-- 视频评价 -->
     <view class='good'>
@@ -56,11 +56,12 @@
   <!-- 第二个滑块的内容 -->
   <view wx:if='{{tab2}}' style='background-color: #f0f1f5;'>
     <block wx:for='{{cataloge}}' wx:key='kkey'>
-    <text class='first'>第{{index+1}}章  {{item.catalogName}}</text>
+    <view class='first'><text>第{{index+1}}章  {{item.catalogName}}</text></view>
     <i-cell-group>
     <block wx:for='{{item.catalogs}}' wx:key='secondItem' wx:for-item='secondItem' wx:for-index='secondIndex'>
       <view bindtap='changeSource' data-index='{{index}}' data-secondIndex='{{secondIndex}}'>
-      <i-cell title="{{secondItem.catalogName}}"></i-cell></view>
+        <i-cell title="{{secondItem.catalogName}}"></i-cell>
+      </view>
     </block>
     </i-cell-group>
     </block>
@@ -73,10 +74,11 @@
         <view slot="footer" bindtap="powerDrawer" data-fatherId='{{item.commentsId}}' data-statu="open">查看回复 ></view>
       </i-card>
     </block>
+    <view style='width:100%;height:110rpx;'></view>
     <!-- 写评论区 -->
     <view class='writeConment'>
         <input type='text' placeholder='说点什么吧' bindinput='getConment' value='{{conmentContent}}'></input>
-        <button bindtap='release' class='btn'>发布</button>  
+        <text bindtap='release' class='btn'>发 布</text>
     </view>
     <!-- 二级评论区 -->
     <view class='secondConment' wx:if='{{showModalStatus}}' animation='{{animationData}}'>
@@ -92,14 +94,13 @@
       <block wx:for='{{secondConment}}' wx:key='kkei'>
         <i-card title="{{item.fromName}}" extra="{{item.time}}" thumb="{{item.fromPicture}}">
           <view slot="content">{{item.msg}}</view>
-          <view slot="footer">查看回复 ></view>
         </i-card>
       </block>
-      </view>
       <!-- 写评论区 -->
       <view class='writeConment'>
         <input type='text' placeholder='说点什么吧' bindinput='getConment' value='{{conmentContent}}'></input>
-        <button bindtap='release' class='btn'>发布</button>  
+        <text bindtap='release' class='btn'>发 布</text>
+      </view>
       </view>
     </view>
   </view>  

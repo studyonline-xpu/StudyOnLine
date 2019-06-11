@@ -23,7 +23,7 @@
       <view class="myitem-icon flex-item" >
         <image src="../../images/star.png"></image>
       </view>
-      <view class="myitem-name flex-item">
+      <view class="myitem-name flex-item" bindtap='cd'>
         <text>我的收藏</text>
       </view>
     </view>

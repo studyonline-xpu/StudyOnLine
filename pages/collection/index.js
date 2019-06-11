@@ -8,7 +8,6 @@ Page({
     /* 内容Body数据 */
     // 热门推荐
     hotList: [],
-    options:{},
   },
 
   /**
@@ -17,9 +16,9 @@ Page({
   onLoad: function (options) {
     var _this = this;
     wx.request({
-      url: 'http://47.103.101.35:8080/study_online-manager-web/video/queryVideoByClassId',
+      url: 'http://47.103.101.35:8080/study_online-manager-web/user//queryCollections',
       data: {
-        classId: options.classId
+        user_id: wx.getStorageSync("openid"),
       },
       success: function (res) {
         var hotlist = res.data;
@@ -28,14 +27,9 @@ Page({
           hotlist[i].navigate = '../other/other?courseInfo=' + courseInfo;
         }
         _this.setData({
-          hotList: res.data,
-          options: options
+          hotList: res.data
         })
       }
     })
   },
-  onShow: function(){
-    var options = this.data.options;
-    this.onLoad(options);
-  }
 })

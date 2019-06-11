@@ -9,12 +9,14 @@ Page({
     current_scroll: '1',
     tab1:true,
     tab2:false,
+    animation2:null,
     tab3:false,
-    name: 'name0',
+    name: 'name0', 
     courseInfo: '',
+    height:'',
     conmentContent:'',
     good:[
-      { name: "likes", value: 123 }, { name: "collection", value: 123 }, { name: "direct", value: 123}
+      { name: "likes", value: 0 }, { name: "collection", value: 0 }, { name: "direct", value: 0}
     ],
     cataloge:[],
     conment:[],
@@ -55,6 +57,7 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     var _this = this;
     var courseInfo = JSON.parse(options.courseInfo);
+    console.log(courseInfo)
     var date = new Date(courseInfo.updateTime);
     var showDate = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
     courseInfo.updateTime = showDate;
@@ -102,15 +105,42 @@ Page({
   change: function (e) {
     var _this = this;
     var thisIcon = _this.data.currentIcon;
+    var height = 0;
+    let query = wx.createSelectorQuery();
+    query.select('.detailDesc').boundingClientRect(rect => {
+      height = rect.height;
+      if (height != 0) {
+        _this.setData({
+          height: height
+        })
+      }
+    }).exec();
+    /* 动画部分 */
+    // 第1步：创建动画实例 
+    var animation = wx.createAnimation({
+      duration: 200,  //动画时长
+      timingFunction: "linear", //线性
+      delay: 0  //0则不延迟
+    });
+    // 第2步：这个动画实例赋给当前的动画实例
     switch (thisIcon){
-      case "down.png":
+      case "down.png":{
         thisIcon = "upward.png";
+        // 第3步：执行第一组动画
+        animation.height(0).step();
         break;
-      case "upward.png":
+      }
+      case "upward.png":{
         thisIcon = "down.png"
+        // 第3步：执行第一组动画
+        var data = _this.data.height;
+        animation.height(data).step();
         break;
+      }
     }
+    // 第4步：导出动画对象赋给数据对象储存
     _this.setData({
+      animation2: animation.export(),
       currentIcon: thisIcon
     })
   },
@@ -175,29 +205,36 @@ Page({
     var _this = this;
     var conment = {};
     conment.msg = _this.data.conmentContent;
-    conment.fromId = wx.getStorageSync("openid1");
-    conment.fatherId = _this.data.courseInfo.videoId;
-    conment.commentsId = '';
-    conment.toId = '';
-    conment.isFather = '';
-    conment.time = '';
-    conment.fromName = '';
-    conment.fromPicture = '';
-    var conmentString = JSON.stringify(conment);
-    wx.request({
-      url: 'http://47.103.101.35:8080/study_online-manager-web/comments/insertComments',
-      data: {
-        commentsJson: conmentString
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
-      },
-      success: function(res) {
-        _this.setData({
-          conmentContent: ''
-        })
-      }
-    })
+    if (conment.msg == '' || conment.msg ==null){
+      wx.showToast({
+        title: '评论不得为空！',
+        icon: 'none'
+      })
+    }else{
+      conment.fromId = wx.getStorageSync("openid1");
+      conment.fatherId = _this.data.courseInfo.videoId;
+      conment.commentsId = '';
+      conment.toId = '';
+      conment.isFather = '';
+      conment.time = '';
+      conment.fromName = '';
+      conment.fromPicture = '';
+      var conmentString = JSON.stringify(conment);
+      wx.request({
+        url: 'http://47.103.101.35:8080/study_online-manager-web/comments/insertComments',
+        data: {
+          commentsJson: conmentString
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
+        },
+        success: function (res) {
+          _this.setData({
+            conmentContent: ''
+          })
+        }
+      })
+    }
   },
   // 二级评论动画
   powerDrawer: function (e) {
@@ -238,7 +275,7 @@ Page({
     this.animation = animation;
 
     // 第3步：执行第一组动画：Y轴偏移240px后(盒子高度是240px)，停
-    animation.translateY(240).step();
+    animation.translateY(300).step();
 
     // 第4步：导出动画对象赋给数据对象储存
     this.setData({

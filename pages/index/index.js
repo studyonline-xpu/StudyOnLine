@@ -60,12 +60,12 @@ Page({
     })
   },
   onShow:function(){
+    this.onLoad();
     var that = this;
     that.data.banner.timeoutProcess = setInterval(that.timetochange,3000);
   },
   onHide:function(){
     var that=this;
-
     clearTimeout(that.data.banner.timeoutProcess);
   },
   /**根据bannerArray的index显示 */

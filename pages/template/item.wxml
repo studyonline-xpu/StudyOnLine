@@ -11,13 +11,13 @@
         <view class="info">
         <view class="title">{{videoName}}</view>
         <view class="meta clearfix">
-            <view class="cell left">
-                <view class="bilibili-index-sprite bilibili-index-play"></view>
-                <text>{{clicks}}</text>
+            <view class="cell left" style='align-items:center;'>
+              <i-icon type="live" style='font-size:50rpx;'/>
+              <text>{{clicks}}</text>
             </view>
-            <view class="cell left">
-                <view class="bilibili-index-sprite bilibili-index-danmu"></view>
-                <text>{{collections}}</text>
+            <view class="cell left" style='align-items:center;'>
+              <i-icon type="collection" style='font-size:50rpx;'/>
+              <text>{{collections}}</text>
             </view>
         </view>
         </view>

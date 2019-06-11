@@ -44,8 +44,7 @@
 }
 .couList{
     font-size: 24rpx;
-    line-height: 48rpx;
-    padding-top: 30rpx;
+    padding-bottom: 30rpx;
 }
 .couList text{
     display: block;
