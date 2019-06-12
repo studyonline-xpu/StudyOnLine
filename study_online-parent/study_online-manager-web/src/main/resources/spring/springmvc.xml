@@ -26,4 +26,5 @@
     <dubbo:reference interface="com.study_online.service.VideoService" id="videoService" timeout="300000"></dubbo:reference>
     <dubbo:reference interface="com.study_online.service.CatalogService" id="catalogService" timeout="300000"></dubbo:reference>
     <dubbo:reference interface="com.study_online.service.CommentService" id="commentService" timeout="300000"></dubbo:reference>
+    <dubbo:reference interface="com.study_online.service.BarrageService" id="barrageService" timeout="300000"></dubbo:reference>
 </beans>
