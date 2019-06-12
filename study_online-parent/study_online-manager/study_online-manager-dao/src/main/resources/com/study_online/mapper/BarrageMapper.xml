@@ -5,7 +5,7 @@
     <id column="barrage_id" jdbcType="VARCHAR" property="barrageId" />
     <result column="msg" jdbcType="VARCHAR" property="msg" />
     <result column="color" jdbcType="VARCHAR" property="color" />
-    <result column="time" jdbcType="DOUBLE" property="time" />
+    <result column="time" jdbcType="INTEGER" property="time" />
     <result column="catalog_id" jdbcType="VARCHAR" property="catalogId" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -103,7 +103,7 @@
     insert into barrage (barrage_id, msg, color, 
       time, catalog_id)
     values (#{barrageId,jdbcType=VARCHAR}, #{msg,jdbcType=VARCHAR}, #{color,jdbcType=VARCHAR}, 
-      #{time,jdbcType=DOUBLE}, #{catalogId,jdbcType=VARCHAR})
+      #{time,jdbcType=INTEGER}, #{catalogId,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.study_online.pojo.Barrage">
     insert into barrage
@@ -135,7 +135,7 @@
         #{color,jdbcType=VARCHAR},
       </if>
       <if test="time != null">
-        #{time,jdbcType=DOUBLE},
+        #{time,jdbcType=INTEGER},
       </if>
       <if test="catalogId != null">
         #{catalogId,jdbcType=VARCHAR},
@@ -161,7 +161,7 @@
         color = #{record.color,jdbcType=VARCHAR},
       </if>
       <if test="record.time != null">
-        time = #{record.time,jdbcType=DOUBLE},
+        time = #{record.time,jdbcType=INTEGER},
       </if>
       <if test="record.catalogId != null">
         catalog_id = #{record.catalogId,jdbcType=VARCHAR},
@@ -176,7 +176,7 @@
     set barrage_id = #{record.barrageId,jdbcType=VARCHAR},
       msg = #{record.msg,jdbcType=VARCHAR},
       color = #{record.color,jdbcType=VARCHAR},
-      time = #{record.time,jdbcType=DOUBLE},
+      time = #{record.time,jdbcType=INTEGER},
       catalog_id = #{record.catalogId,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -192,7 +192,7 @@
         color = #{color,jdbcType=VARCHAR},
       </if>
       <if test="time != null">
-        time = #{time,jdbcType=DOUBLE},
+        time = #{time,jdbcType=INTEGER},
       </if>
       <if test="catalogId != null">
         catalog_id = #{catalogId,jdbcType=VARCHAR},
@@ -204,7 +204,7 @@
     update barrage
     set msg = #{msg,jdbcType=VARCHAR},
       color = #{color,jdbcType=VARCHAR},
-      time = #{time,jdbcType=DOUBLE},
+      time = #{time,jdbcType=INTEGER},
       catalog_id = #{catalogId,jdbcType=VARCHAR}
     where barrage_id = #{barrageId,jdbcType=VARCHAR}
   </update>
