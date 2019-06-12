@@ -324,52 +324,52 @@ public class BarrageExample {
             return (Criteria) this;
         }
 
-        public Criteria andTimeEqualTo(Double value) {
+        public Criteria andTimeEqualTo(Integer value) {
             addCriterion("time =", value, "time");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotEqualTo(Double value) {
+        public Criteria andTimeNotEqualTo(Integer value) {
             addCriterion("time <>", value, "time");
             return (Criteria) this;
         }
 
-        public Criteria andTimeGreaterThan(Double value) {
+        public Criteria andTimeGreaterThan(Integer value) {
             addCriterion("time >", value, "time");
             return (Criteria) this;
         }
 
-        public Criteria andTimeGreaterThanOrEqualTo(Double value) {
+        public Criteria andTimeGreaterThanOrEqualTo(Integer value) {
             addCriterion("time >=", value, "time");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLessThan(Double value) {
+        public Criteria andTimeLessThan(Integer value) {
             addCriterion("time <", value, "time");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLessThanOrEqualTo(Double value) {
+        public Criteria andTimeLessThanOrEqualTo(Integer value) {
             addCriterion("time <=", value, "time");
             return (Criteria) this;
         }
 
-        public Criteria andTimeIn(List<Double> values) {
+        public Criteria andTimeIn(List<Integer> values) {
             addCriterion("time in", values, "time");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotIn(List<Double> values) {
+        public Criteria andTimeNotIn(List<Integer> values) {
             addCriterion("time not in", values, "time");
             return (Criteria) this;
         }
 
-        public Criteria andTimeBetween(Double value1, Double value2) {
+        public Criteria andTimeBetween(Integer value1, Integer value2) {
             addCriterion("time between", value1, value2, "time");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotBetween(Double value1, Double value2) {
+        public Criteria andTimeNotBetween(Integer value1, Integer value2) {
             addCriterion("time not between", value1, value2, "time");
             return (Criteria) this;
         }

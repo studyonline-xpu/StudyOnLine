@@ -9,7 +9,7 @@ public class Barrage implements Serializable {
 
     private String color;
 
-    private Double time;
+    private Integer time;
 
     private String catalogId;
 
@@ -39,11 +39,11 @@ public class Barrage implements Serializable {
         this.color = color == null ? null : color.trim();
     }
 
-    public Double getTime() {
+    public Integer getTime() {
         return time;
     }
 
-    public void setTime(Double time) {
+    public void setTime(Integer time) {
         this.time = time;
     }
 
