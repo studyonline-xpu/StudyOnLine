@@ -58,16 +58,25 @@ public class UserServiceImpl implements UserService {
         String session_key = json.get("session_key").toString();
         //用户的唯一标识（openid）
         String openid = (String) json.get("openid");
-        //新创建一个用户
-        User user = new User();
-        user.setUserId(openid);
-        user.setUserName(nickName);
-        user.setPicture(imgUrl);
-        user.setCreateTime(new Date());
-        //返回session_key和openid
-        map.put("status",userMapper.insertSelective(user));
-        map.put("session_key", session_key);
-        map.put("openid", openid);
+        //创建userExample查询用户是或否存在
+        UserExample userExample = new UserExample();
+        UserExample.Criteria criteria = userExample.createCriteria();
+        criteria.andUserIdEqualTo(openid);
+        List<User> users = userMapper.selectByExample(userExample);
+        if (users != null && users.size() != 0) {
+            map.put("status", 1);
+            map.put("openid", openid);
+        } else {
+            //新创建一个用户
+            User user = new User();
+            user.setUserId(openid);
+            user.setUserName(nickName);
+            user.setPicture(imgUrl);
+            user.setCreateTime(new Date());
+            //返回session_key和openid
+            map.put("status",userMapper.insertSelective(user));
+            map.put("openid", openid);
+        }
         return map;
     }
 
