@@ -3,18 +3,17 @@
     "pages/getUserInfo/index",
     "pages/index/index",
     "pages/course/course",
-    "pages/mystudy/mystudy",
     "pages/more/more",
     "pages/other/other",
-    "pages/logs/logs",
     "pages/div/div",
-    "pages/collection/index"
+    "pages/collection/index",
+    "pages/myInfo/myInfo"
   ],
   "window":{
     "backgroundColor":"#31a030",
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "大表嫂课堂",
+    "navigationBarTitleText": "飞软云课堂",
     "navigationBarTextStyle":"black"
   },
   "tabBar":{
@@ -34,12 +33,6 @@
         "text":"全部课程",
         "iconPath":"images/tab_course1.png",
         "selectedIconPath":"images/tab_course2.png"
-      },
-      {
-        "pagePath":"pages/mystudy/mystudy",
-        "text":"我的学习",
-        "iconPath":"images/tab_mystudy1.png",
-        "selectedIconPath":"images/tab_mystudy2.png"
       },
       {
         "pagePath":"pages/more/more",

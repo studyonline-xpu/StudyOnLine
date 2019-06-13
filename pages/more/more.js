@@ -26,5 +26,11 @@ Page({
     wx.navigateTo({
       url: '../collection/index',
     })
+  },
+  showDetailInfo: function () {
+    var _this = this;
+    wx.navigateTo({
+      url: '../myInfo/myInfo?userInfo=' + JSON.stringify(this.data.userInfo),
+    })
   }
 })

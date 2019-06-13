@@ -6,7 +6,6 @@ Page({
    */
   data: {
     /* 内容Body数据 */
-    // 热门推荐
     hotList: [],
   },
 
@@ -16,9 +15,9 @@ Page({
   onLoad: function (options) {
     var _this = this;
     wx.request({
-      url: 'http://47.103.101.35:8080/study_online-manager-web/user//queryCollections',
+      url: 'http://47.103.101.35:8080/study_online-manager-web/user/queryCollections',
       data: {
-        user_id: wx.getStorageSync("openid"),
+        user_id: wx.getStorageSync("openid1"),
       },
       success: function (res) {
         var hotlist = res.data;

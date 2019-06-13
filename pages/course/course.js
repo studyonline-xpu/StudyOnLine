@@ -7,11 +7,6 @@ Page({
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
-    // var that=this;
-    // var coursesArr = util.getCourses();
-    // that.setData({
-    //   courses:coursesArr
-    // });
     var _this = this;
     wx.request({
       url: 'http://47.103.101.35:8080/study_online-manager-web/videoClass/queryVideoClassByFatherId',
@@ -26,7 +21,7 @@ Page({
   selectTab:function(e){
     var _this = this,
     index = e.currentTarget.dataset.index,
-      coursesArr = _this.data.courses;
+    coursesArr = _this.data.courses;
     for(var  i = 0;i < coursesArr.length; i++ ){
       coursesArr[i].active = "";//false
     }
@@ -41,6 +36,11 @@ Page({
         fatherId: fatherId
       },
       success: function(res) {
+        if (res.data.length == 0 || res.data == null){
+          wx.navigateTo({
+            url: '../div/div?classId=' + fatherId,
+          })
+        }
         _this.setData({
           detailCourse: res.data
         })

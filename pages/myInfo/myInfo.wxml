@@ -1,0 +1,11 @@
+<i-cell-group>
+    <i-cell title="头像">
+      <image src='{{userInfo.avatarUrl}}' style='width:100rpx;height:100rpx;float:right'></image>
+    </i-cell>
+    <i-cell title="昵称">
+      <text style='float:right'>{{userInfo.nickName}}</text>
+    </i-cell>
+    <i-cell title="邮箱">
+      <text style='float:right'></text>
+    </i-cell>
+</i-cell-group>

@@ -12,8 +12,8 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.0",
-	"appid": "wx9d4a2e112506aa29",
+	"libVersion": "2.7.1",
+	"appid": "wxe27ed9d9b6480ec2",
 	"projectname": "wechat-Study163-master",
 	"debugOptions": {
 		"hidedInDevtools": []

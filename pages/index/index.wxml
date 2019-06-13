@@ -4,7 +4,7 @@
   <view class="search flex">
     <view class="search-left">
       <image src="../../images/search.png"></image>
-      <input placeholder="大表嫂课堂" placeholder-class="search-placeholder"/>
+      <input placeholder="飞软云课堂" placeholder-class="search-placeholder"/>
     </view>
     <view class="search-right flex-item" bindtap="upper">
       <image src="../../images/email.png" style='width:50%;'></image>
@@ -21,7 +21,7 @@
   <!-- ad -->
   <view class="ad flex">
     <block wx:for="{{ad}}" wx:for-item="item">
-      <navigator url="{{item.navigator}}">
+      <navigator url="{{hotCourse[0].navigate}}">
         <image src="{{item.imgurl}}"></image>
       </navigator>
     </block>

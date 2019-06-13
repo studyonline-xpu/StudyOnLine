@@ -1,0 +1,15 @@
+<!--pages/test/test.wxml-->
+<view class='video'>
+  <video  id='myvideo'
+          bindtimeupdate='getCurrentTime' 
+          src='http://101.132.78.78/group1/M00/00/00/rBOl6Vz2JESAKLDoAV_ulKXTIRI358.mp4' 
+          binderror="videoErrorCallback" 
+          enable-progress-gesture='{{true}}'
+          custom-cache="{{false}}"
+          enable-danmu='true' danmu-btn='true' danmu-list='{{danmuList}}'>
+  </video>
+</view>
+<view>
+    <input bindblur="bindInputBlur" placeholder='input here' value="{{inputValue}}" auto-focus/>
+    <button bindtap="bindSendDanmu">发送弹幕</button>
+</view>

@@ -1,12 +1,22 @@
 <!--pages/other/other.wxml-->
 <view class='video'>
-  <video src='{{videoUrl}}' binderror="videoErrorCallback" enable-progress-gesture='true'></video>
+  <video src='{{videoUrl}}' 
+         id='myvideo' 
+         binderror="videoErrorCallback"
+         enable-progress-gesture='{{true}}'
+         danmu-btn='{{true}}' 
+         bindtimeupdate='getCurrentTime'
+         enable-danmu danmu-list='{{danmuList}}'></video>
+</view>
+<view class='sendDanmu'>
+  <input type='text' placeholder='发个友善的弹幕见证当下' bindblur='bindInputBlur' value='{{inputValue}}'></input>
+  <text bindtap='sendDanmu' class='btn'>发  送</text>
 </view>
 <!-- 选项卡切换 -->
 <i-tabs current="{{ current }}" color="#f759ab" bindchange="handleChange">
     <i-tab key="1" title="详情"></i-tab>
     <i-tab key="2" title="目录"></i-tab>
-    <i-tab key="3" title="评论"></i-tab>
+    <i-tab key="3" title="评论 {{conmentCount}}"></i-tab>
 </i-tabs>
 <view wx:if='{{tab1}}' class='tb1'>
   <view class='authorInfo'>
@@ -59,7 +69,7 @@
     <view class='first'><text>第{{index+1}}章  {{item.catalogName}}</text></view>
     <i-cell-group>
     <block wx:for='{{item.catalogs}}' wx:key='secondItem' wx:for-item='secondItem' wx:for-index='secondIndex'>
-      <view bindtap='changeSource' data-index='{{index}}' data-secondIndex='{{secondIndex}}'>
+      <view bindtap='changeSource' data-index='{{index}}' data-secondIndex='{{secondIndex}}' style='color:{{secondItem.color}}'>
         <i-cell title="{{secondItem.catalogName}}"></i-cell>
       </view>
     </block>

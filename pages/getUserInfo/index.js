@@ -33,11 +33,11 @@ Page({
           if (res.code) {
             //把获取到的code通过一个request的请求发给java服务器
             wx.request({
-              url: 'http://47.103.101.35:8080/study_online-manager-web/user/login',
+              url: 'http://localhost:8081/user/login',
               data: {
                 js_code: res.code,
-                appid: 'wx9d4a2e112506aa29',
-                secret: '85c05d04afb55259c0aa21398268d020',
+                appid: 'wxe27ed9d9b6480ec2',
+                secret: '98c3c14a295163fc3825b6d5df38312b',
                 imgUrl: userInfo.avatarUrl,
                 nickName: userInfo.nickName
               },

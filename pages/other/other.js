@@ -1,12 +1,26 @@
 // pages/other/other.js
+// 随机获取颜色
+function getRandomColor() {
+  let rgb = []
+  for (let i = 0; i < 3; ++i) {
+    let color = Math.floor(Math.random() * 256).toString(16)
+    color = color.length == 1 ? '0' + color : color
+    rgb.push(color)
+  }
+  return '#' + rgb.join('')
+}
 Page({
+  videoContext: '',
+  currentTime: '',
   data:{
+    inputValue: '',
     currentIcon:"down.png",
     showModalStatus: false,
     videoUrl:'',
     showModalStatus: false,
     current: '1',
     current_scroll: '1',
+    catalogId:'',
     tab1:true,
     tab2:false,
     animation2:null,
@@ -14,13 +28,15 @@ Page({
     name: 'name0', 
     courseInfo: '',
     height:'',
+    conmentCount:'',
     conmentContent:'',
     good:[
       { name: "likes", value: 0 }, { name: "collection", value: 0 }, { name: "direct", value: 0}
     ],
     cataloge:[],
     conment:[],
-    secondConment:[]
+    secondConment:[],
+    danmuList:[]
   },
   handleChange({ detail }) {
     var index = detail.key;
@@ -47,17 +63,80 @@ Page({
       })
     }
   },
-
+  onShareAppMessage: function(res) {
+    return {
+      title: this.data.courseInfo.className,
+      path: '/pages/other/other?courseInfo=' + JSON.stringify(this.data.courseInfo)
+    }
+  },
+  // 获取当前视频的时间
+  getCurrentTime: function (e) {
+    this.currentTime = e.detail.currentTime;
+  },
   handleChangeScroll({ detail }) {
     this.setData({
       current_scroll: detail.key
     });
   },
+  // 获取弹幕信息
+  bindInputBlur: function (e) {
+    this.inputValue = e.detail.value
+  },
+  //发送弹幕
+  sendDanmu: function () {
+    var time = parseInt(this.currentTime);
+    var catalogId = this.data.catalogId;
+    var color = getRandomColor();
+    this.videoContext.sendDanmu({
+      text: this.inputValue,
+      color: color
+    })
+    var barrage = {barrageId:'',msg: this.inputValue, color: color, time: time, catalogId: catalogId};
+    wx.request({
+      url: 'http://47.103.101.35:8080/study_online-manager-web/barrage/insertBarrage',
+      data: {
+        barrageJson: JSON.stringify(barrage)
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
+      },
+      method:'POST',
+      success: function (res) {
+        wx.showToast({
+          title: '弹幕已送达！',
+          icon: 'none'
+        })
+      }
+    })
+    this.setData({
+      inputValue: ""
+    })
+  },
+  // 查询弹幕
+  queryBarrage: function() {
+    var _this = this;
+    wx.request({
+      url: 'http://47.103.101.35:8080/study_online-manager-web/barrage/queryBarrage',
+      data:{
+        catalog_id: _this.data.catalogId
+      },
+      success: function(res){
+        var list = res.data;
+        for(var i = 0;i<list.length;i++) {
+          list[i].text = list[i].msg;
+        }
+        _this.setData({
+          danmuList: list
+        })
+      }
+    })
+  },
   onLoad:function(options){
+    // 初始化video上下文对象
+    this.videoContext = wx.createVideoContext('myvideo');
     // 页面初始化 options为页面跳转所带来的参数
     var _this = this;
     var courseInfo = JSON.parse(options.courseInfo);
-    console.log(courseInfo)
     var date = new Date(courseInfo.updateTime);
     var showDate = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
     courseInfo.updateTime = showDate;
@@ -77,10 +156,21 @@ Page({
         var cataloge = res.data;
         for (var i = 0; i < cataloge.length;i++){
           cataloge[i].name = "name"+i;
+          for (var j = 0; j < cataloge[i].catalogs.length;j++) {
+            if(i==0&&j==0){
+              cataloge[i].catalogs[j].color = 'green';
+            }else{
+              cataloge[i].catalogs[j].color = 'black';
+            }
+          }
         }
         _this.setData({
           cataloge: cataloge,
+          videoUrl: cataloge[0].catalogs[0].videoUrl,
+          catalogId: cataloge[0].catalogs[0].catalogId
         })
+        // 查询弹幕
+        _this.queryBarrage();
       }
     })
     wx.request({
@@ -96,7 +186,8 @@ Page({
           list[i].time = showDate;
         }
         _this.setData({
-          conment: list
+          conment: list,
+          conmentCount: list.length
         })
       }
     })
@@ -144,12 +235,23 @@ Page({
       currentIcon: thisIcon
     })
   },
+  // 点击章节切换视频
   changeSource: function (e) {
     var _this = this;
     var index = e.currentTarget.dataset.index;
     var secondIndex = e.currentTarget.dataset.secondindex;
+    var cataloge = _this.data.cataloge;
+    for (var i = 0; i < cataloge.length; i++){
+      for (var j = 0; j < cataloge[i].catalogs.length; j++){
+        cataloge[i].catalogs[j].color = 'black';
+      }
+    }
+    cataloge[index].catalogs[secondIndex].color = 'green';
+    console.log(cataloge[index])
     _this.setData({
-      videoUrl: _this.data.cataloge[index].catalogs[secondIndex].videoUrl
+      videoUrl: _this.data.cataloge[index].catalogs[secondIndex].videoUrl,
+      catalogId: _this.data.cataloge[index].catalogs[secondIndex].catalogId,
+      cataloge: cataloge
     })
   },
   changeData: function(e){
@@ -166,9 +268,6 @@ Page({
           url: 'http://47.103.101.35:8080/study_online-manager-web/video/addLikes',
           data: {
             video_id: this.data.courseInfo.videoId,
-          },
-          success: function (res) {
-
           }
         })
       }
@@ -184,15 +283,12 @@ Page({
           data: {
             video_id: this.data.courseInfo.videoId,
             user_id: wx.getStorageSync("openid1")
-          },
-          success: function(res){
-            
           }
         })
       }
     // 转发
     } else if(index == 2){
-
+      
     }
   },
   getConment: function(e) {
@@ -228,9 +324,31 @@ Page({
         header: {
           'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
         },
+        method: 'POST',
         success: function (res) {
           _this.setData({
             conmentContent: ''
+          })
+          wx.showToast({
+            title: '评论成功！',
+            icon: 'none'
+          })
+          wx.request({
+            url: 'http://47.103.101.35:8080/study_online-manager-web/comments/queryComments',
+            data: {
+              father_id: _this.data.courseInfo.videoId
+            },
+            success:function (res) {
+              var list = res.data;
+              for (var i = 0; i < list.length; i++) {
+                var date = new Date(list[i].time);
+                var showDate = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+                list[i].time = showDate;
+              }
+              _this.setData({
+                conment: list
+              })
+            }
           })
         }
       })
