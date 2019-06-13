@@ -30,6 +30,7 @@ public class BarrageServiceImpl implements BarrageService {
     @Override
     public void insertBarrage(Barrage barrage) {
         String barrage_id = IDUtils.genItemId();
+        System.out.println(barrage);
         barrage.setBarrageId(barrage_id);
         barrageMapper.insert(barrage);
     }

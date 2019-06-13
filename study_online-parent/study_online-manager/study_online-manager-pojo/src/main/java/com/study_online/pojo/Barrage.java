@@ -11,6 +11,17 @@ public class Barrage implements Serializable {
 
     private Integer time;
 
+    @Override
+    public String toString() {
+        return "Barrage{" +
+                "barrageId='" + barrageId + '\'' +
+                ", msg='" + msg + '\'' +
+                ", color='" + color + '\'' +
+                ", time=" + time +
+                ", catalogId='" + catalogId + '\'' +
+                '}';
+    }
+
     private String catalogId;
 
     private static final long serialVersionUID = 1L;
