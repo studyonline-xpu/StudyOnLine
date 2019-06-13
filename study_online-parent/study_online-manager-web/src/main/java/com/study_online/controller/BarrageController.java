@@ -35,13 +35,13 @@ public class BarrageController {
 
     /**
      * 插入弹幕
-     * @param barrage
+     * @param barrageJson
      */
     @RequestMapping("/insertBarrage")
     @ResponseBody
-    public void insertBarrage(String barrage){
-        Barrage b =JsonUtils.jsonToPojo(barrage,Barrage.class);
-        barrageService.insertBarrage(b);
+    public void insertBarrage(String barrageJson){
+        Barrage barrage =JsonUtils.jsonToPojo(barrageJson,Barrage.class);
+        barrageService.insertBarrage(barrage);
     }
 
 }
