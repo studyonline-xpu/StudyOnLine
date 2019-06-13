@@ -12,15 +12,13 @@ public class User implements Serializable {
 
     private Date createTime;
 
-    private String email;
+    private String emile;
 
     private String phoneCode;
 
     private String permission;
 
     private String collect;
-
-    private String picture;
 
     private static final long serialVersionUID = 1L;
 
@@ -56,12 +54,12 @@ public class User implements Serializable {
         this.createTime = createTime;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmile() {
+        return emile;
     }
 
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
+    public void setEmile(String emile) {
+        this.emile = emile == null ? null : emile.trim();
     }
 
     public String getPhoneCode() {
@@ -86,13 +84,5 @@ public class User implements Serializable {
 
     public void setCollect(String collect) {
         this.collect = collect == null ? null : collect.trim();
-    }
-
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture == null ? null : picture.trim();
     }
 }

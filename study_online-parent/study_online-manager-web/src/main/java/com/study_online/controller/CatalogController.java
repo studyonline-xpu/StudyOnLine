@@ -21,7 +21,7 @@ public class CatalogController {
     CatalogService catalogService;
     @RequestMapping("/queryChapters")
     @ResponseBody
-    public List<Catalog> queryChapters(String video_id){
-        return catalogService.queryChapter(video_id);
+    public List<Catalog> queryChapters(String video_id,String user_id){
+        return catalogService.queryChapter(video_id,user_id);
     }
 }

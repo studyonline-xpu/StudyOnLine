@@ -6,13 +6,12 @@
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="emile" jdbcType="VARCHAR" property="emile" />
     <result column="phone_code" jdbcType="VARCHAR" property="phoneCode" />
     <result column="permission" jdbcType="CHAR" property="permission" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.study_online.pojo.User">
     <result column="collect" jdbcType="LONGVARCHAR" property="collect" />
-    <result column="picture" jdbcType="LONGVARCHAR" property="picture" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -73,10 +72,10 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    user_id, user_name, password, create_time, email, phone_code, permission
+    user_id, user_name, password, create_time, emile, phone_code, permission
   </sql>
   <sql id="Blob_Column_List">
-    collect, picture
+    collect
   </sql>
   <select id="selectByExampleWithBLOBs" parameterType="com.study_online.pojo.UserExample" resultMap="ResultMapWithBLOBs">
     select
@@ -128,13 +127,11 @@
   </delete>
   <insert id="insert" parameterType="com.study_online.pojo.User">
     insert into user (user_id, user_name, password, 
-      create_time, email, phone_code, 
-      permission, collect, picture
-      )
+      create_time, emile, phone_code, 
+      permission, collect)
     values (#{userId,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{email,jdbcType=VARCHAR}, #{phoneCode,jdbcType=VARCHAR}, 
-      #{permission,jdbcType=CHAR}, #{collect,jdbcType=LONGVARCHAR}, #{picture,jdbcType=LONGVARCHAR}
-      )
+      #{createTime,jdbcType=TIMESTAMP}, #{emile,jdbcType=VARCHAR}, #{phoneCode,jdbcType=VARCHAR}, 
+      #{permission,jdbcType=CHAR}, #{collect,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.study_online.pojo.User">
     insert into user
@@ -151,8 +148,8 @@
       <if test="createTime != null">
         create_time,
       </if>
-      <if test="email != null">
-        email,
+      <if test="emile != null">
+        emile,
       </if>
       <if test="phoneCode != null">
         phone_code,
@@ -162,9 +159,6 @@
       </if>
       <if test="collect != null">
         collect,
-      </if>
-      <if test="picture != null">
-        picture,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -180,8 +174,8 @@
       <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="email != null">
-        #{email,jdbcType=VARCHAR},
+      <if test="emile != null">
+        #{emile,jdbcType=VARCHAR},
       </if>
       <if test="phoneCode != null">
         #{phoneCode,jdbcType=VARCHAR},
@@ -191,9 +185,6 @@
       </if>
       <if test="collect != null">
         #{collect,jdbcType=LONGVARCHAR},
-      </if>
-      <if test="picture != null">
-        #{picture,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -218,8 +209,8 @@
       <if test="record.createTime != null">
         create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.email != null">
-        email = #{record.email,jdbcType=VARCHAR},
+      <if test="record.emile != null">
+        emile = #{record.emile,jdbcType=VARCHAR},
       </if>
       <if test="record.phoneCode != null">
         phone_code = #{record.phoneCode,jdbcType=VARCHAR},
@@ -229,9 +220,6 @@
       </if>
       <if test="record.collect != null">
         collect = #{record.collect,jdbcType=LONGVARCHAR},
-      </if>
-      <if test="record.picture != null">
-        picture = #{record.picture,jdbcType=LONGVARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -244,11 +232,10 @@
       user_name = #{record.userName,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      email = #{record.email,jdbcType=VARCHAR},
+      emile = #{record.emile,jdbcType=VARCHAR},
       phone_code = #{record.phoneCode,jdbcType=VARCHAR},
       permission = #{record.permission,jdbcType=CHAR},
-      collect = #{record.collect,jdbcType=LONGVARCHAR},
-      picture = #{record.picture,jdbcType=LONGVARCHAR}
+      collect = #{record.collect,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -259,7 +246,7 @@
       user_name = #{record.userName,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      email = #{record.email,jdbcType=VARCHAR},
+      emile = #{record.emile,jdbcType=VARCHAR},
       phone_code = #{record.phoneCode,jdbcType=VARCHAR},
       permission = #{record.permission,jdbcType=CHAR}
     <if test="_parameter != null">
@@ -278,8 +265,8 @@
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="email != null">
-        email = #{email,jdbcType=VARCHAR},
+      <if test="emile != null">
+        emile = #{emile,jdbcType=VARCHAR},
       </if>
       <if test="phoneCode != null">
         phone_code = #{phoneCode,jdbcType=VARCHAR},
@@ -290,9 +277,6 @@
       <if test="collect != null">
         collect = #{collect,jdbcType=LONGVARCHAR},
       </if>
-      <if test="picture != null">
-        picture = #{picture,jdbcType=LONGVARCHAR},
-      </if>
     </set>
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
@@ -301,11 +285,10 @@
     set user_name = #{userName,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
-      email = #{email,jdbcType=VARCHAR},
+      emile = #{emile,jdbcType=VARCHAR},
       phone_code = #{phoneCode,jdbcType=VARCHAR},
       permission = #{permission,jdbcType=CHAR},
-      collect = #{collect,jdbcType=LONGVARCHAR},
-      picture = #{picture,jdbcType=LONGVARCHAR}
+      collect = #{collect,jdbcType=LONGVARCHAR}
     where user_id = #{userId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.study_online.pojo.User">
@@ -313,7 +296,7 @@
     set user_name = #{userName,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
-      email = #{email,jdbcType=VARCHAR},
+      emile = #{emile,jdbcType=VARCHAR},
       phone_code = #{phoneCode,jdbcType=VARCHAR},
       permission = #{permission,jdbcType=CHAR}
     where user_id = #{userId,jdbcType=VARCHAR}

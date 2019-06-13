@@ -26,6 +26,16 @@ public class Catalog implements Serializable {
     //自己加的属性
     private List<Catalog> catalogs;
 
+    private  boolean isCollected = false;
+
+    public boolean isCollected() {
+        return isCollected;
+    }
+
+    public void setCollected(boolean collected) {
+        isCollected = collected;
+    }
+
     public List<Catalog> getCatalogs() {
         return catalogs;
     }
