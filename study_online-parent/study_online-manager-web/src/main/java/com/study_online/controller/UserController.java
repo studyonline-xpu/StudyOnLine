@@ -21,6 +21,16 @@ import java.util.Map;
 public class UserController {
     @Autowired
     UserService userService;
+
+    /**
+     * 登录方法
+     * @param appid
+     * @param secret
+     * @param js_code
+     * @param imgUrl
+     * @param nickName
+     * @return
+     */
     @RequestMapping("/login")
     @ResponseBody
     public Map<String,String> Login(String appid,String secret,String js_code,String imgUrl,String nickName) {
