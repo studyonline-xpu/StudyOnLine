@@ -227,11 +227,6 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
-  <!--查询热点视频-->
-  <select id="queryHotVideo" resultMap="BaseResultMap" parameterType="java.lang.Integer">
-      SELECT * from video ORDER BY(clicks) DESC LIMIT #{begin},8
-  </select>
-
   <update id="updateByExampleSelective" parameterType="map">
     update video
     <set>
@@ -377,7 +372,12 @@
       likes = #{likes,jdbcType=BIGINT}
     where video_id = #{videoId,jdbcType=VARCHAR}
   </update>
+<!--  自己添的方法-->
   <select id="queryVideoByClassId" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
     select * from video where video.class_id=#{classId} order by video.update_time desc
+  </select>
+  <!--查询热点视频-->
+  <select id="queryHotVideo" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+      SELECT * from video ORDER BY(clicks) DESC LIMIT #{begin},8
   </select>
 </mapper>
