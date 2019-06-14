@@ -2,7 +2,8 @@
 <view class='video'>
   <video src='{{videoUrl}}' 
          id='myvideo' 
-         binderror="videoErrorCallback"
+         binderror="videoErrorCallback" 
+         bindplay='qureyDanmu' 
          enable-progress-gesture='{{true}}'
          danmu-btn='{{true}}' 
          bindtimeupdate='getCurrentTime'

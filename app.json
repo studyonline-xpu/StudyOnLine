@@ -38,7 +38,7 @@
         "pagePath":"pages/more/more",
         "text":"帐号",
         "iconPath":"images/tab_account1.png",
-        "selectedIconPath":"images/tab_account1.png"
+        "selectedIconPath":"images/tab_account2.png"
       }
     ]
   },

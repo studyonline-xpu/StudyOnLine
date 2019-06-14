@@ -32,7 +32,7 @@
         <text>热度排行榜</text>
         <navigator>更多 >;</navigator>
       </view>
-      <view class="course-grp-item flex">
+      <view class="course-grp-item flex" wx:if='{{hasCourse}}'>
         <block wx:for="{{hotCourse}}" wx:for-item="item">
           <navigator url="{{item.navigate}}" class="flex flex-col">
             <image src="{{item.picture}}"></image>
@@ -40,10 +40,10 @@
             <text>￥ {{item.price}}</text>
           </navigator>
         </block>
-      </view> 
+      </view>
   </view>
   <!--全部课程-->
-  <view class="navigator-course">
-    <navigator url="{{moreCourses.url}}">{{moreCourses.title}}</navigator>
+  <view class="navigator-course" bindtap='refreshResource'>
+    <text>{{moreCourses.title}}</text><image src='{{moreCourses.icon}}'></image>
   </view>
 </view>

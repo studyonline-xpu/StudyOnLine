@@ -63,12 +63,6 @@ Page({
       })
     }
   },
-  onShareAppMessage: function(res) {
-    return {
-      title: this.data.courseInfo.className,
-      path: '/pages/other/other?courseInfo=' + JSON.stringify(this.data.courseInfo)
-    }
-  },
   // 获取当前视频的时间
   getCurrentTime: function (e) {
     this.currentTime = e.detail.currentTime;
@@ -131,6 +125,13 @@ Page({
       }
     })
   },
+  // 视频播放查询弹幕
+  qureyDanmu:function(){
+    // 查询弹幕
+    if(this.data.danmuList.length==null){
+      this.queryBarrage();
+    }
+  },
   onLoad:function(options){
     // 初始化video上下文对象
     this.videoContext = wx.createVideoContext('myvideo');
@@ -150,7 +151,8 @@ Page({
     wx.request({
       url: 'http://47.103.101.35:8080/study_online-manager-web/catalog/queryChapters',
       data: {
-        video_id: this.data.courseInfo.videoId
+        video_id: this.data.courseInfo.videoId,
+        user_id: wx.getStorageSync("openid1")
       },
       success: function (res) {
         var cataloge = res.data;
@@ -166,11 +168,10 @@ Page({
         }
         _this.setData({
           cataloge: cataloge,
+          ['good[1].name']: cataloge[0].collected ? 'collection2' :'collection',
           videoUrl: cataloge[0].catalogs[0].videoUrl,
           catalogId: cataloge[0].catalogs[0].catalogId
         })
-        // 查询弹幕
-        _this.queryBarrage();
       }
     })
     wx.request({
@@ -247,7 +248,6 @@ Page({
       }
     }
     cataloge[index].catalogs[secondIndex].color = 'green';
-    console.log(cataloge[index])
     _this.setData({
       videoUrl: _this.data.cataloge[index].catalogs[secondIndex].videoUrl,
       catalogId: _this.data.cataloge[index].catalogs[secondIndex].catalogId,

@@ -33,7 +33,7 @@ Page({
           if (res.code) {
             //把获取到的code通过一个request的请求发给java服务器
             wx.request({
-              url: 'http://localhost:8081/user/login',
+              url: 'http://47.103.101.35:8080/study_online-manager-web/user/login',
               data: {
                 js_code: res.code,
                 appid: 'wxe27ed9d9b6480ec2',

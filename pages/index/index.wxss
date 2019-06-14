@@ -112,6 +112,12 @@
   color:#4bbc93;
   font-size: 24rpx;
 }
+.navigator-course image{
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
 .icon{
   width: 32rpx;
   height: 32rpx;
