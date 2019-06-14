@@ -19,6 +19,13 @@ import java.util.List;
 public class CatalogController {
     @Autowired
     CatalogService catalogService;
+
+    /**
+     * 通过视的video_id 查询课程的一级章节
+     * @param video_id
+     * @param user_id
+     * @return
+     */
     @RequestMapping("/queryChapters")
     @ResponseBody
     public List<Catalog> queryChapters(String video_id,String user_id){
