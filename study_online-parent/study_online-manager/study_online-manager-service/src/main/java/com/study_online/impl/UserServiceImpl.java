@@ -101,6 +101,11 @@ public class UserServiceImpl implements UserService {
         VideoExample.Criteria criteria1 = example1.createCriteria();
         criteria1.andVideoIdIn(strings);
         List<Video> videos = videoMapper.selectByExampleWithBLOBs(example1);
+        for (Video video : videos) {
+            User user = userMapper.selectByPrimaryKey(video.getUserId());
+            video.setUserName(user.getUserName());
+            video.setUserPicture(user.getPicture());
+        }
 
         return videos;
     }

@@ -26,6 +26,12 @@ public class UserController {
     public Map<String,String> Login(String appid,String secret,String js_code,String imgUrl,String nickName) {
         return userService.login(appid,secret,js_code,imgUrl,nickName);
     }
+
+    /**
+     * 查询用于收藏的所有课程
+     * @param user_id
+     * @return
+     */
     @RequestMapping("/queryCollections")
     @ResponseBody
     public List<Video> queryCollections(String user_id){
