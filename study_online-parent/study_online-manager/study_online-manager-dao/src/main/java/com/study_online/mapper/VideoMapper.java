@@ -44,5 +44,5 @@ public interface VideoMapper {
     /**
      * 根据点击量反序查询出热点视频
      */
-    List<Video> queryHotVideo();
+    List<Video> queryHotVideo(Integer begin);
 }
