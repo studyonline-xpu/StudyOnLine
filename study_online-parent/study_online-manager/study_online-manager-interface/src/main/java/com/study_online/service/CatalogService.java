@@ -10,5 +10,5 @@ import java.util.List;
  */
 
 public interface CatalogService {
-    public List<Catalog> queryChapter(String video_id);
+    public List<Catalog> queryChapter(String video_id,String user_id);
 }
