@@ -228,8 +228,8 @@
     </if>
   </select>
   <!--查询热点视频-->
-  <select id="queryHotVideo" resultMap="BaseResultMap">
-      SELECT * from video ORDER BY(clicks) DESC LIMIT 8
+  <select id="queryHotVideo" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+      SELECT * from video ORDER BY(clicks) DESC LIMIT #{begin},8
   </select>
 
   <update id="updateByExampleSelective" parameterType="map">

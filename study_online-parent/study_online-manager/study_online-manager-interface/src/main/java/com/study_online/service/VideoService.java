@@ -21,7 +21,7 @@ public interface VideoService {
      * 查询热点课程，用于首页的推荐
      * @return
      */
-    public List<Video> queryHotVideo();
+    public List<Video> queryHotVideo(Integer begin);
     /**
      * 点赞函数
      */

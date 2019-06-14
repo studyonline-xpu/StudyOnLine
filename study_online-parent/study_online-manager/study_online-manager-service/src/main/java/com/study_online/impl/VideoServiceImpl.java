@@ -45,8 +45,8 @@ public class VideoServiceImpl implements VideoService {
      * @return
      */
     @Override
-    public List<Video> queryHotVideo() {
-        List<Video> videos = videoMapper.queryHotVideo();
+    public List<Video> queryHotVideo(Integer begin) {
+        List<Video> videos = videoMapper.queryHotVideo(begin);
         for (Video video : videos) {
             User user = userMapper.selectByPrimaryKey(video.getUserId());
             video.setUserName(user.getUserName());

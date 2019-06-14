@@ -37,8 +37,8 @@ public class VideoController {
      */
     @RequestMapping("/queryHotVideo")
     @ResponseBody
-    public List<Video> queryHotVideo(){
-        return videoService.queryHotVideo();
+    public List<Video> queryHotVideo(Integer begin){
+        return videoService.queryHotVideo(begin);
     }
 
     /**
