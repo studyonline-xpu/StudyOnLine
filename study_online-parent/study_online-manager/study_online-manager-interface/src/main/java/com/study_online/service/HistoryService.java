@@ -11,5 +11,10 @@ import java.util.List;
  */
 
 public interface HistoryService {
-   public List<Video> queryHistory();
+   /**
+    * 查询最近浏览
+    * @param user_id
+    * @return
+    */
+   public List<Video> queryHistory(String user_id);
 }

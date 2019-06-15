@@ -380,4 +380,11 @@
   <select id="queryHotVideo" resultMap="BaseResultMap" parameterType="java.lang.Integer">
       SELECT * from video ORDER BY(clicks) DESC LIMIT #{begin},8
   </select>
+  <!--查询历史视屏-->
+  <select id="queryHistory" parameterType="java.lang.String" resultMap="BaseResultMap">
+      SELECT video.* FROM video, history
+      WHERE history.user_id = #{user_id}
+      and history.video_id = video.video_id
+      ORDER BY history.time desc
+  </select>
 </mapper>

@@ -45,4 +45,8 @@ public interface VideoMapper {
      * 根据点击量反序查询出热点视频
      */
     List<Video> queryHotVideo(Integer begin);
+    /**
+     * 查询最近浏览
+     */
+    List<Video> queryHistory(String user_id);
 }

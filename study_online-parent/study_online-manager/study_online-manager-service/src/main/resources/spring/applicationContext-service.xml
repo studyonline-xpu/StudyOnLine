@@ -35,6 +35,7 @@
     <dubbo:service interface="com.study_online.service.CatalogService" ref="catalogServiceImpl" />
     <dubbo:service interface="com.study_online.service.CommentService" ref="commentServiceImpl" />
     <dubbo:service interface="com.study_online.service.BarrageService" ref="barrageServiceImpl" />
+    <dubbo:service interface="com.study_online.service.HistoryService" ref="historyServiceImpl" />
 
 
 </beans>
