@@ -62,4 +62,16 @@ public class VideoController {
        videoService.addCollect(video_id,user_id);
     }
 
+    /**
+     * 搜索功能的实现
+     * @param keyWords
+     * @return
+     */
+    @RequestMapping("/searchWithKeyWord")
+    @ResponseBody
+    public List<Video> searchKeyWords(String keyWords){
+        System.out.println(keyWords);
+        return videoService.searchWithKeyWords(keyWords);
+    }
+
 }

@@ -49,4 +49,11 @@ public interface VideoMapper {
      * 查询最近浏览
      */
     List<Video> queryHistory(String user_id);
+
+    /**
+     * 搜索功能的实现
+     * @param keyWords
+     * @return
+     */
+    List<Video> searchWithKeyWords(String keyWords);
 }

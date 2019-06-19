@@ -93,4 +93,20 @@ public class VideoServiceImpl implements VideoService {
         user.setCollect(collect);
         userMapper.updateByPrimaryKeyWithBLOBs(user);
     }
+
+    /**
+     * 搜索功能的实现
+     * @param keyWords
+     * @return
+     */
+    @Override
+    public List<Video> searchWithKeyWords(String keyWords) {
+        System.out.println(keyWords);
+        String target = "%"+keyWords+"%";
+        List<Video> videos = videoMapper.searchWithKeyWords(target);
+
+        System.out.println(videos == null);
+        System.out.println(videos.size());
+        return videos;
+    }
 }

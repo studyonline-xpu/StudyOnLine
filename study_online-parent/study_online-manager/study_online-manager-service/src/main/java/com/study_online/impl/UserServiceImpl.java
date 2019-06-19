@@ -109,4 +109,40 @@ public class UserServiceImpl implements UserService {
 
         return videos;
     }
+
+    /**
+     * 取消收藏
+     * @param user_id
+     * @param video_id
+     */
+    @Override
+    public List<Video> deleteCollections(String user_id, String video_id) {
+        //查出所有的收藏视屏的video_id
+        UserExample example = new UserExample();
+        UserExample.Criteria criteria = example.createCriteria();
+        criteria.andUserIdEqualTo(user_id);
+        List<User> users = userMapper.selectByExampleWithBLOBs(example);
+        User user = users.get(0);
+        //删除收藏
+        String collection = user.getCollect();
+        String[] split = collection.split(",");
+        Set<String> set = new HashSet<String>();
+        String deleteResult="";
+        for (String i: split) {
+            set.add(i);
+        }
+        set.remove(video_id);
+        if((set == null)||set.isEmpty() ){
+            user.setCollect("");
+        }else{
+            for (String t: set) {
+                 deleteResult += t+",";
+            }
+           String result =  deleteResult.substring(0,deleteResult.length()-1);
+            user.setCollect(result);
+        }
+
+        userMapper.updateByPrimaryKeySelective(user);
+        return queryCollections(user.getUserId());
+    }
 }

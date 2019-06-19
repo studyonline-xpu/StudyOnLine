@@ -387,4 +387,8 @@
       and history.video_id = video.video_id
       ORDER BY history.time desc
   </select>
+  <!--搜索功能的实现-->
+  <select id="searchWithKeyWords" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM video WHERE video_name LIKE #{keyWords}
+  </select>
 </mapper>

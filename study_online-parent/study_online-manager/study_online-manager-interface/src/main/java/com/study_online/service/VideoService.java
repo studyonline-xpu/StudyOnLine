@@ -33,4 +33,11 @@ public interface VideoService {
      * @param user_id
      */
     public void addCollect(String video_id,String user_id);
+
+    /**
+     * 搜索功能的实现
+     * @param keyWords
+     * @return
+     */
+    public List<Video> searchWithKeyWords(String keyWords);
 }

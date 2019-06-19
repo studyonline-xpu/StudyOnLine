@@ -47,4 +47,16 @@ public class UserController {
     public List<Video> queryCollections(String user_id){
         return userService.queryCollections(user_id);
     }
+
+    /**
+     * 取消收藏
+     * @param user_id
+     * @param video_id
+     * @return
+     */
+    @RequestMapping("/deleteCollections")
+    @ResponseBody
+    public List<Video> deleteCollections(String user_id,String video_id){
+        return userService.deleteCollections(user_id,video_id);
+    }
 }
