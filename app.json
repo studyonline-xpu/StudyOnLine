@@ -6,8 +6,9 @@
     "pages/more/more",
     "pages/other/other",
     "pages/div/div",
-    "pages/collection/index",
-    "pages/myInfo/myInfo"
+    "pages/collection/collection",
+    "pages/myInfo/myInfo",
+    "pages/history/history"
   ],
   "window":{
     "backgroundColor":"#31a030",

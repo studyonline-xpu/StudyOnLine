@@ -1,0 +1,44 @@
+<!-- 导入Item模板 -->
+<import src="../template/item.wxml"/>
+
+<!-- 热门推荐 begin -->
+  <view class="row-container">
+    <navigator class="header">
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-hot"></view>
+        <text></text>
+      </view>
+      <view class="right hot">
+        <view class="bilibili-index-sprite bilibili-index-ranking"></view>
+        <text>我的收藏</text>
+      </view>
+    </navigator>
+    <view class="content-wrapper">
+      <block wx:for="{{hotList}}" wx:key="avid">
+        <!-- List Item begin -->
+          <view class="content-list"  bindlongpress="longpress" data-videoId='{{item.videoId}}'>
+          <view class="item" data-url='{{item.navigate}}' bindtap='navigateTo'>
+              <view class="top">
+              <view class="cover-img" 
+              style="opacity: 1; background-image: url({{item.picture}});">
+              </view>
+              </view>
+              <view class="info">
+              <view class="title">{{item.videoName}}</view>
+              <view class="meta clearfix">
+                  <view class="cell left" style='align-items:center;'>
+                    <i-icon type="live" style='font-size:50rpx;'/>
+                    <text>{{item.clicks}}</text>
+                  </view>
+                  <view class="cell left" style='align-items:center;'>
+                    <i-icon type="collection" style='font-size:50rpx;'/>
+                    <text>{{item.collections}}</text>
+                  </view>
+              </view>
+              </view>
+          </view>
+          </view>
+          <!-- List Item end -->
+      </block>
+    </view>
+  </view>

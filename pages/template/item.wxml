@@ -1,7 +1,7 @@
 <!-- 热门推荐、动画区Item -->
 <template name="jiefItem1">
     <!-- List Item begin -->
-    <view class="content-list">
+    <view class="content-list"  bindlongtap="powerDrawer" data-statu="open">
     <navigator class="item" url='{{navigate}}'>
         <view class="top">
         <view class="cover-img" 

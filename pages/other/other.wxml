@@ -10,7 +10,7 @@
          enable-danmu danmu-list='{{danmuList}}'></video>
 </view>
 <view class='sendDanmu'>
-  <input type='text' placeholder='发个友善的弹幕见证当下' bindblur='bindInputBlur' value='{{inputValue}}'></input>
+  <input type='text' placeholder='发个友善的弹幕见证当下' bindinput='bindInput' value='{{inputValue}}'></input>
   <text bindtap='sendDanmu' class='btn'>发  送</text>
 </view>
 <!-- 选项卡切换 -->

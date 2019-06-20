@@ -23,8 +23,10 @@ Page({
     })
   },
   cd: function(e) {
+    var directory = e.currentTarget.dataset.directory
+    var url = '../' + directory + '/' + directory;
     wx.navigateTo({
-      url: '../collection/index',
+      url: url,
     })
   },
   showDetailInfo: function () {

@@ -23,15 +23,15 @@
       <view class="myitem-icon flex-item" >
         <image src="../../images/star.png"></image>
       </view>
-      <view class="myitem-name flex-item" bindtap='cd'>
+      <view class="myitem-name flex-item" bindtap='cd' data-directory='collection'>
         <text>我的收藏</text>
       </view>
     </view>
     <view class="my-item flex-wrp">
-      <view class="myitem-icon flex-item" >
+      <view class="myitem-icon flex-item">
         <image src="../../images/recent.png"></image>
       </view>
-      <view class="myitem-name flex-item">
+      <view class="myitem-name flex-item" bindtap='cd' data-directory='history'>
         <text>最近浏览</text>
       </view>
     </view>

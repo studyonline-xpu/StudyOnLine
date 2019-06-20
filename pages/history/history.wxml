@@ -10,11 +10,11 @@
       </view>
       <view class="right hot">
         <view class="bilibili-index-sprite bilibili-index-ranking"></view>
-        <text>我的收藏</text>
+        <text>历史浏览</text>
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{hotList}}" wx:key="avid">
+      <block wx:for="{{historyList}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>

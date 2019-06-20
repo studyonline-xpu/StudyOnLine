@@ -33,9 +33,5 @@ Page({
         })
       }
     })
-  },
-  onShow: function(){
-    var options = this.data.options;
-    this.onLoad(options);
   }
 })

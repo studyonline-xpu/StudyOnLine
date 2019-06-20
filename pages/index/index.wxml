@@ -4,7 +4,7 @@
   <view class="search flex">
     <view class="search-left">
       <image src="../../images/search.png"></image>
-      <input placeholder="飞软云课堂" placeholder-class="search-placeholder"/>
+      <input placeholder="飞软云课堂" placeholder-class="search-placeholder" bindinput='getKeyWord' value='{{keyWords}}'/>
     </view>
     <view class="search-right flex-item" bindtap="upper">
       <image src="../../images/email.png" style='width:50%;'></image>

@@ -12,8 +12,8 @@ function getRandomColor() {
 Page({
   videoContext: '',
   currentTime: '',
+  inputValue: '',
   data:{
-    inputValue: '',
     currentIcon:"down.png",
     showModalStatus: false,
     videoUrl:'',
@@ -73,7 +73,7 @@ Page({
     });
   },
   // 获取弹幕信息
-  bindInputBlur: function (e) {
+  bindInput: function (e) {
     this.inputValue = e.detail.value
   },
   //发送弹幕
@@ -85,7 +85,7 @@ Page({
       text: this.inputValue,
       color: color
     })
-    var barrage = {barrageId:'',msg: this.inputValue, color: color, time: time, catalogId: catalogId};
+    var barrage = { barrageId: '', msg: this.inputValue, color: color, time: time, catalogId: catalogId};
     wx.request({
       url: 'http://47.103.101.35:8080/study_online-manager-web/barrage/insertBarrage',
       data: {
@@ -124,13 +124,6 @@ Page({
         })
       }
     })
-  },
-  // 视频播放查询弹幕
-  qureyDanmu:function(){
-    // 查询弹幕
-    if(this.data.danmuList.length==null){
-      this.queryBarrage();
-    }
   },
   onLoad:function(options){
     // 初始化video上下文对象
@@ -172,6 +165,8 @@ Page({
           videoUrl: cataloge[0].catalogs[0].videoUrl,
           catalogId: cataloge[0].catalogs[0].catalogId
         })
+        // 查询弹幕
+        _this.queryBarrage();
       }
     })
     wx.request({

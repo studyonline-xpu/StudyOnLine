@@ -8,7 +8,8 @@ Page({
       delay:3000,
       timeoutProcess:null,
       currindex:0,
-      bannerimg:[]
+      bannerimg:[],
+      keyWords:''
     },
     ad:[],
     begin: 0,
@@ -87,6 +88,20 @@ Page({
           })
         }
       }
+    })
+  },
+  getKeyWord: function(e){
+    this.setData({
+      keyWords: e.detail.value
+    })
+  },
+  upper: function () {
+    var _this = this;
+    wx.navigateTo({
+      url: '../search/search?keyWords=' + _this.data.keyWords,
+    })
+    _this.setData({
+      keyWords: ''
     })
   }
 })

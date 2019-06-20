@@ -6,7 +6,7 @@ Page({
    */
   data: {
     /* 内容Body数据 */
-    hotList: [],
+    historyList: [],
   },
 
   /**
@@ -15,25 +15,25 @@ Page({
   onLoad: function (options) {
     var _this = this;
     wx.request({
-      url: 'http://47.103.101.35:8080/study_online-manager-web/user/queryCollections',
+      url: 'http://47.103.101.35:8080/study_online-manager-web/history/queryHistory',
       data: {
         user_id: wx.getStorageSync("openid1"),
       },
       success: function (res) {
-        var hotlist = res.data;
-        if (hotlist.length==0){
+        var historyList = res.data;
+        if (historyList.length==0){
           wx.showToast({
-            title: '暂无数据，去收藏您喜欢的视频吧！',
+            title: '暂无历史纪录，去逛一逛吧！',
             icon: 'none'
           })
         }else{
-          for (var i = 0; i < hotlist.length; i++) {
-            var courseInfo = JSON.stringify(hotlist[i]);
-            hotlist[i].navigate = '../other/other?courseInfo=' + courseInfo;
+          for (var i = 0; i < historyList.length; i++) {
+            var courseInfo = JSON.stringify(historyList[i]);
+            historyList[i].navigate = '../other/other?courseInfo=' + courseInfo;
           }
         }
         _this.setData({
-          hotList: hotlist
+          historyList: historyList
         })
       }
     })
