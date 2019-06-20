@@ -104,9 +104,12 @@ public class VideoServiceImpl implements VideoService {
         System.out.println(keyWords);
         String target = "%"+keyWords+"%";
         List<Video> videos = videoMapper.searchWithKeyWords(target);
+        for (Video video : videos) {
+            User user = userMapper.selectByPrimaryKey(video.getUserId());
+            video.setUserName(user.getUserName());
+            video.setUserPicture(user.getPicture());
+        }
 
-        System.out.println(videos == null);
-        System.out.println(videos.size());
         return videos;
     }
 }
